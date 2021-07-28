@@ -13,7 +13,12 @@
 
         /* * < tag < class < id < inline style < !important */
         /* @import "style.css"; */
-        @import url("style.css");
+        /* @import url("style.css"); */
+
+        h3,li{color:brown}
+        .title{color:skyblue}
+        .warning{background-color:red;color:white}
+        
     </style>
     <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
@@ -25,5 +30,22 @@
     <h3 style="color:red">Lorem, ipsum dolor.</h3>
     <hr>
     <p>Lorem ipsum <span>dolor</span>  sit amet consectetur adipisicing elit. <span>Explicabo</span> , aspernatur?</p>
+
+
+    <div style="color:red">
+        test입니다.
+        <p >test</p>
+    </div>
+
+    
+    
+    <h3 class="title">title</h3>
+    <div>Lorem ipsum <strong> dolor sit amet.</strong></div>
+    <ul>
+        <li>Lorem.</li>
+        <li><strong>Veniam.</strong> </li>
+        <li class="warning">Eveniet?</li>
+    </ul>
+    <div class="title">Lorem, ipsum dolor.</div>
 </body>
 </html>
