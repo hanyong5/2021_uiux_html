@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+        .box{
+            font-size:1em;
+            font-weight:bold;
+            font-style:italic
+        }
+        /* p.box{color:blue} */
+
+        /* div#header{background-color:skyblue} 
+        div{background-color:blue}
+        #header div.box{background-color:yellow}
+
+        #header .box{background-color:teal} */
+    </style>
+</head>
+<body>
+    <div class="box">test</div>
+    <p class="box">test</p>
+
+    <div id="header">
+        test
+        <div class="box">
+            안녕하세요
+        </div>
+    </div>
+    <hr>
+    <style>
+        /* *{background-color:violet} */
+        #section > div.menu > p{background-color:skyblue}
+        #section p{background-color:orange}
+        div.menu > p{background-color:blue !important}
+
+
+        /* * < class < id < inline style(tag attr) < !important */
+    </style>
+    <div id="section">
+        <div class="menu">
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+        </div>
+        <p>child</p>
+    </div>
+
+    <style>
+       div[title="test"]{background-color:red}
+       input[type="text"]{background-color:white}
+       img[src$="jpg"]{border:10px solid white}
+    </style>
+    <div title="test">han</div>
+    <div title="han">Lorem.</div>
+    <input type="text">
+    <img src="../images/testimg.jpg" alt="">
+    
+    
+    <hr>
+    
+    <style>
+        a:link{text-decoration:none}
+        a:visited{color:black}
+        a:active{background-color:red}
+        a:hover{background-color:gray}
+    </style>
+    <a href="http://www.naver.com">네이버</a>
+    <a href="http://www.korea.com">코리아</a>
+
+    <hr>
+    <style>
+        /* ul.test > li:last-child{background-color:skyblue}
+        ul.test > li:first-child{background-color:red}
+        ul.test > li:nth-child(2n+1){background-color:blue} */
+
+        ul.test .li1st{color:black;background-color:pink}
+        ul.test .li2st{color:black;background-color:pink}
+
+        ul.test li{color:black;background-color:pink}
+        ul.test li:hover{background-color:red;color:white}
+    </style>
+    <ul class="test">
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+    </ul>
+
+
+    <hr>
+    <style>
+       div.box1{
+           border-top:5px solid orange;
+           border-bottom:5px solid red;
+           text-align:center;
+           width:100px;height:100px;
+           line-height:100px;
+           /* padding:20px 40px; */
+           padding:10px 20px 30px;
+           margin:20px 40px;
+       } 
+    </style>
+    <div class="box1">text</div>
+
+    <br><br><br><br><br><br><br>
+
+
+
+</body>
+</html>
