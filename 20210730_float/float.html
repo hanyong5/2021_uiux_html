@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        *{margin:0;padding:0}
+        li{list-style:none}
+        .clearfix:after{
+            content:"";clear:both;display:block;
+        }
+
+
+
+        div.box{
+            width: 1000px;
+            background: skyblue;
+            margin:0 auto;
+        }
+        div.box > div{
+            width: 200px;height: 100px;
+        }
+        div.box1{background: blue;float: left;}
+        div.box2{background: orange;float:right}
+
+        div.nav>ul>li{
+            float: left;
+            width:200px;text-align: center;
+            height: 40px;line-height:40px
+        }
+        div.nav>ul>li:hover{background-color:orange}
+        div.nav{
+            width: 1000px;
+            background: skyblue;
+            margin:0 auto
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        <div class="box1">left</div>
+        <div class="box2">right</div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, quod.
+    <div class="nav">
+        <!-- ul>li*5>{menu$} -->
+        <ul class="clearfix">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+    </div>
+
+</body>
+</html>

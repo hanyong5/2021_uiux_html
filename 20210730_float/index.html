@@ -18,20 +18,43 @@
             float:left
         }
         div.inBox2{
-            width: 200px;height: 500px;
+            width: 200px;height: 300px;
             background-color:lightcoral;
             float:right
         }
         .clear{clear:both}
+
+        div.box1{width: 300px;height: 300px;background: green;}
+
+        div.box1:before{
+            content:"한성용님, ";display:block
+        }
+        div.box1:after{
+            content:"반갑습니다.";display:block
+        }
+
+        /* div.box:after{
+            content:"";clear:both;display:block
+        } */
+
+        .clearfix:after{
+            content:"";clear:both;display:block;
+        }
+       
         
     </style>
 </head>
 <body>
-    <div class="box">
+    <div class="box clearfix">
         <div class="inBox1">left</div>
         <div class="inBox2">right</div>
-        <div class="clear"></div>
     </div>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, repellendus.
+
+
+
+    <div class="box1">
+        안녕하세요.
+    </div>
 </body>
 </html>
