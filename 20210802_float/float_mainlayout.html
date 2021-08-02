@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mainpage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+
     <style>
         /* reset */
         *{margin: 0;padding: 0;}
@@ -22,7 +26,7 @@
         nav.nav>ul>li>a:hover{background-color: #00f;color:white}
 
         /* visual  */
-        .visual{height: 400px;background: #333;text-align: center;line-height:400px;}
+        .visual{width: 1000px;margin: 0 auto;}
 
         /* container  */
         .container{width: 1000px;margin: 0 auto; background-color: orange;text-align: center;}
@@ -37,6 +41,12 @@
             line-height: 100px;
         }
     </style>
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider();
+        });
+
+    </script>
 </head>
 <body>
     <header class="header">
@@ -51,13 +61,20 @@
             </ul>
         </nav>
     </header>
+
     <div class="visual">
-        visual
+        <ul class="slider">
+            <li><img src="../images/pc01.jpg" alt=""></li>
+            <li><img src="../images/pc02.jpg" alt=""></li>
+            <li><img src="../images/pc03.jpg" alt=""></li>
+        </ul>
     </div>
+
     <div class="container clearfix">
         <aside class="aside">aside</aside>
         <section class="section">section</section>
     </div>
+
     <footer class="footer">
         footer
     </footer>
