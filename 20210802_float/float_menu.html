@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float menu</title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;}
+        li{list-style:none}
+        .clearfix:after{content:"";clear: both;display: block;}
+        a:link,a:visited{text-decoration:none;color:black}
+
+        /* nav */
+        div.nav{
+            width: 1000px;background-color:skyblue;
+            margin: 0 auto;
+        }
+
+        /* div.nav > ul:after{content:"";clear: both;display: block;} */
+
+        div.nav > ul > li{
+            float: left; width:166.666px;
+        }
+        /* div.nav>ul>li:nth-child(2n){background-color:orange} */
+
+        /* div.nav > ul > li:hover{background-color:blue;} */
+
+        div.nav > ul > li > a{display: block;text-align: center;line-height:40px;}
+        /* 1. a inline tag -> block   2.text center 3.line height줄간격*/
+        div.nav > ul > li > a:hover{color:white;background-color:blue}
+        /* hover : 마우스 오버시 텍스트, 배경 색변화  */
+    </style>
+</head>
+<body>
+   <!-- .nav>ul>li*6>a[href="#"]>{menu$} -->
+   <div class="nav">
+       <ul class="clearfix">
+           <li><a href="#">menu1</a></li>
+           <li><a href="#">menu2</a></li>
+           <li><a href="#">menu3</a></li>
+           <li><a href="#">menu4</a></li>
+           <li><a href="#">menu5</a></li>
+           <li><a href="#">menu6</a></li>
+       </ul>
+   </div>
+</body>
+</html>
