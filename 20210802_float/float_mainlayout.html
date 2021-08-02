@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainpage</title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        a:link,a:visited{text-decoration: none;color:black}
+        .clearfix:after{content:"";clear: both;display: block;}
+
+        /* header  */
+        header.header{
+            width: 1000px;margin: 0 auto;
+        }
+        header.header>h1{text-align: center;}
+        nav.nav>ul>li{float: left;width: 20%;background-color:skyblue;}
+        nav.nav>ul>li>a{display: block;line-height: 40px;text-align: center;}
+        nav.nav>ul>li>a:hover{background-color: #00f;color:white}
+
+        /* visual  */
+        .visual{height: 400px;background: #333;text-align: center;line-height:400px;}
+
+        /* container  */
+        .container{width: 1000px;margin: 0 auto; background-color: orange;text-align: center;}
+        .container>.aside{float: left;width: 300px;background-color: #f00;line-height: 500px;}
+        .container>.section{float: right;width: 680px;background-color: #0f0;line-height:500px}
+
+        /* footer  */
+        footer.footer{
+            width: 1000px;margin: 0 auto;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><a href="#">logo</a></h1>
+        <nav class="nav">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="visual">
+        visual
+    </div>
+    <div class="container clearfix">
+        <aside class="aside">aside</aside>
+        <section class="section">section</section>
+    </div>
+    <footer class="footer">
+        footer
+    </footer>
+</body>
+</html>
