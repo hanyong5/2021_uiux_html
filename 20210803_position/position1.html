@@ -42,6 +42,39 @@
             background-color: #0ff;bottom: 0;
             line-height:40px !important;
         }
+
+
+        header#header{
+            width: 1000px;height: 100px;
+            background-color: skyblue;
+            margin: 0 auto;margin-top: 20px;
+            position: relative;
+        }
+        header#header>h1{
+            width: 100px;height: 100px;
+            background-color:orange;
+        }
+        header#header>h1>a{
+            display: block;text-align: center;line-height:100px;
+        }
+
+        .util{
+            width: 200px;height: 40px;
+            background-color: #f00;
+            position: absolute;
+            right: 0;top: 0;
+        }
+        .gnb{
+            width: 600px;height: 50px;
+            background-color: #ff0;
+            position: absolute;
+            right: 0;bottom: 0;
+        }
+
+        .gnb>ul>li{float: left;width: 25%;}
+        .gnb>ul>li>a{
+            display: block;line-height:50px;text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -58,5 +91,29 @@
         <div class="tbox2">02</div>
         <div class="tbox3">03</div>
     </div>
+
+    <header id="header">
+        <h1><a href="#">logo</a></h1>
+        <div class="util">
+            util
+        </div>
+        <nav class="gnb">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
 </html>
