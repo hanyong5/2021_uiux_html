@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* div.box{width: 200px;height: 200px;float:left}
+div.box:nth-child(1){background-color:skyblue}
+div.box:nth-child(2){background-color:orange;}
+div.box:nth-child(3){background-color:yellow;} */
+
+body{background-image: url(../../images/bg_grid.gif);}
+div.box1,div.box2,div.box3,div.box4{
+    width: 200px;height: 200px;
+}
+div.box1{
+    background-color: #f00;position:absolute;right:0
+}
+div.box2{
+    background-color: #0f0;
+    position:absolute;right:0;bottom:0;
+    z-index:2
+}
+div.box3{
+    background-color: #00f;
+    position: absolute;left: 0;top: 0;
+    z-index:1
+}
+div.box4{
+    background-color: #ff0;
+    position: absolute;left: 0;bottom: 0;
+}
