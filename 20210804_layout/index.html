@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+
+        /* header  */
+        header#header{
+            width: 1000px;
+            background-color: #0ff;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+        header#header>h1{
+            width: 100px;height: 100px;
+            background-color: #ccc;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            
+        }
+        header#header>h1>a{
+            display: block;text-align: center;
+            line-height: 100px;
+        }
+        header#header>nav.gnb{}
+        header#header>nav.gnb>ul>li{
+            float: left;width: 20%;
+            /* background-color: #f00; */
+        }
+        /* header#header>nav.gnb>ul>li:hover{
+            background-color: #00f;
+        } */
+        header#header>nav.gnb>ul>li>a{
+            display: block;text-align: center;
+            line-height: 40px;
+            color:white;background-color: #f00;
+        }
+        header#header>nav.gnb>ul>li>a:hover{
+            background-color: #00f;
+        }
+
+        /* visual  */
+        .visual{
+            background-color: pink;
+            padding:20px 0;
+        }
+        .container{
+            width: 1000px;height: 300px;
+            background-color: #ff0;
+            margin: 0 auto;position: relative;
+        }
+        .container>div{position: absolute;}
+        .container>div.box1{
+            width: 400px;height: 150px;
+            background-color: #f00;
+            top:50%;margin-top:-75px;
+        }
+        .container>div.box2{
+            width: 300px;height: 200px;
+            background-color: #0f0;
+            right:20px;bottom: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- header start -->
+    <header id="header">
+        <h1><a href="#">LOGO</a></h1>
+        <nav class="gnb">
+            <!-- ul>li*5>a[href="#"]>{menu$} -->
+            <ul class="clearfix">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">ONLINE</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- visual area start -->
+    <div class="visual">
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+    <!-- visual area end  -->
+
+</body>
+</html>
