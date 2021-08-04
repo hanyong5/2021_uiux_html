@@ -15,6 +15,7 @@
             margin: 0 auto;
             padding-top: 10px;
         }
+        
         header#header>h1{
             width: 100px;height: 100px;
             background-color: #ccc;
@@ -46,7 +47,7 @@
         /* visual  */
         .visual{
             background-color: pink;
-            padding:20px 0;
+            padding:20px 0;margin-bottom: 20px;
         }
         .container{
             width: 1000px;height: 300px;
@@ -67,20 +68,45 @@
         }
         
         /* section  */
-        section.section{width: 1000px;height: 300px;margin: 0 auto;}
+        section.section{width: 1000px;margin: 0 auto;margin-bottom:20px;}
         section.section li{float: left;width: 231.25px;margin-left:25px;}
         /* section.section li:last-child{margin-right:0;} */
         section.section li:first-child{margin-left: 0;}
-        section.section img{width: 100%;}
+        section.section img{width: 100%;display: block;}
 
+        section.section h3{text-align: center;}
+        section.section h3:after{
+            content:"";width:60px;height: 2px;
+            background-color: #000;
+            display: block;margin:8px auto;
+        }
+        section.section p{text-align: center;margin-bottom: 20px;}
 
+        .sec1st{padding: 30px 0 30px 0;}
+        section.section1{width: 1000px;margin: 0 auto;}
+        section.section1 li{float: left;width: 316.666px;margin-left: 25px;}
+        section.section1 li:first-child{margin-left: 0;}
+        section.section1 img{width: 100%;display: block;}
 
+        /* footer  */
+        footer#footerWrap>div.footer{
+            width: 1000px;margin: 0 auto;
+        }
+        div.footer>h2{
+            width: 200px;height: 200px;float: left;
+        }
+        div.footer>address{
+            float: left;width: 800px;font-style: normal;
+        }
 
 
         /* common css  */
         .bgYellow{background-color: yellow !important;}
         .bgBlue{background-color:blue !important;}
         .bgGray{background-color: #eee !important;}
+
+        .pt30{padding-top:30px !important;}
+        .pb30{padding-bottom: 30px !important;}
 
     </style>
 </head>
@@ -111,7 +137,9 @@
     <!-- visual area end  -->
 
     <!-- section area start  -->
-    <section class="section bgGray">
+    <section class="section pt30 pb30">
+        <h3>PRODUCT</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
         <ul class="clearfix">
             <li><img src="../images/testimg.jpg" alt=""></li>
             <li><img src="../images/testimg.jpg" alt=""></li>
@@ -119,14 +147,39 @@
             <li><img src="../images/testimg.jpg" alt=""></li>
         </ul>
     </section>
-    <section class="section1 bgGray">
+    <div class="bgGray pt30 pb30">
+        <section class="section1">
+            <ul class="clearfix">
+                <li><img src="../images/testimg.jpg" alt=""></li>
+                <li><img src="../images/testimg.jpg" alt=""></li>
+                <li><img src="../images/testimg.jpg" alt=""></li>
+            </ul>
+        </section>
+    </div>
+    <section class="section pt30 pb30">
+        <h3>GALLERY</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
         <ul class="clearfix">
+            <li><img src="../images/testimg.jpg" alt=""></li>
             <li><img src="../images/testimg.jpg" alt=""></li>
             <li><img src="../images/testimg.jpg" alt=""></li>
             <li><img src="../images/testimg.jpg" alt=""></li>
         </ul>
     </section>
     <!-- section area end  -->
+
+    <!-- footer area start  -->
+    <footer id="footerWrap" class="bgGray pt30 pb30">
+        <div class="footer clearfix">
+            <h2>LOGO</h2>
+            <address>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Eum nisi enim aliquid totam neque quo velit nemo et labore asperiores?
+            </address>
+        </div>  
+    </footer>
+    <!-- footer area end  -->
+
+
 
 </body>
 </html>
