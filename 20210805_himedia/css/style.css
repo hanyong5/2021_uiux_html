@@ -42,3 +42,21 @@ div.navWrap>nav.gnb a{
 div.navWrap>nav.gnb a:hover{
     background-color: blue;
 }
+
+/* visual  */
+div.visualWrap{
+    height: 400px;overflow:hidden;
+    _background-image: url(../images/visualbg01.jpg);
+    _background-repeat: no-repeat; /* repeat-x..repeat-y...no-repeat */
+    _background-position: center;  /* 10px 10px ... top right center */
+    _background-color: #203B6A;
+    background: #203B6A url(../images/visualbg01.jpg) no-repeat center;
+}
+div.visualWrap > div.visual{
+    width: 980px;height: 400px;position: relative;margin: 0 auto;
+}
+div.visualWrap > div.visual > div.visualTxt{
+    position: absolute;top:50%;margin-top:-92px;
+    font-size: 79px;font-weight: bold;line-height: 92px;letter-spacing: 0.085em;color: #fff;
+}
+div.visualWrap > div.visual > img{position: absolute;right: 0;top:20px}
