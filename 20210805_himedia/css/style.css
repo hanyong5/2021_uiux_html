@@ -13,6 +13,32 @@ nav.util{_background-color: #f00;float: right;}
 nav.util>ul{}
 nav.util>ul>li{float: left;}
 nav.util>ul>li>a{
-    display: block;text-align: center;line-height:26px;padding:5px 8px;
-    color:#888;font-size: 14px;
+    display: block;text-align: center;line-height:26px;padding:0 10px;height: 26px;
+    color:#888;font-size: 14px;position: relative;
+}
+nav.util>ul>li>a:after{
+    content:"";width: 1px;height: 10px;display: block;background-color: #c4c4c4;
+    position: absolute;top: 7px;right: 0;
+}
+nav.util>ul>li:last-child>a:after{
+    content:"";display: none;
+}
+
+div.logWrap{width: 980px;margin: 0 auto;_background-color: #ccc;}
+div.logWrap>h1{width: 200px;margin: 0 auto;}
+div.logWrap>h1>a{display: block;text-align: center;line-height:75px;}
+
+div.navWrap{background-color: #1D5DA4;}
+div.navWrap>nav.gnb{width: 980px;margin: 0 auto;}
+div.navWrap>nav.gnb li{
+    float: left;width:calc(980px / 6);border-right: 1px solid #336DAC;
+}
+div.navWrap>nav.gnb li:first-child{
+    border-left: 1px solid #336DAC;
+}
+div.navWrap>nav.gnb a{
+    display: block;text-align: center;line-height:45px;color:#fff;font-weight: bold;
+}
+div.navWrap>nav.gnb a:hover{
+    background-color: blue;
 }
