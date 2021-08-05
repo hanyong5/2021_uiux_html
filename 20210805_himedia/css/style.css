@@ -1,0 +1,18 @@
+@charset "utf-8";
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header  */
+header#header{}
+header#header > div.topWrap{border-bottom: 1px solid #c4c4c4;}
+header#header > div.topWrap > div.top{
+    width: 980px;margin: 0 auto;_background-color: #0ff;
+}
+nav.util{_background-color: #f00;float: right;}
+nav.util>ul{}
+nav.util>ul>li{float: left;}
+nav.util>ul>li>a{
+    display: block;text-align: center;line-height:26px;padding:5px 8px;
+    color:#888;font-size: 14px;
+}
