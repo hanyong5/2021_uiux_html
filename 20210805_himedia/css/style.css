@@ -60,3 +60,20 @@ div.visualWrap > div.visual > div.visualTxt{
     font-size: 79px;font-weight: bold;line-height: 92px;letter-spacing: 0.085em;color: #fff;
 }
 div.visualWrap > div.visual > img{position: absolute;right: 0;top:20px}
+
+/* banner */
+.bannerWrap{width: 980px;margin: 0 auto;}
+.bannerWrap li{float: left;width:calc(100% / 5);height: 196px;padding: 10px;padding-top: 15px;}
+.bannerWrap img{display: block;margin: 0 auto;margin-bottom:10px;}
+.bannerWrap .txt{text-align: center;color:white}
+.bannerWrap h3{font-size: 18px;margin-bottom:5px;}
+.bannerWrap p{font-size: 14px;}
+
+.bannerWrap li:nth-child(1){background: #7C99B9;}
+.bannerWrap li:nth-child(2){background: #4F74A1;}
+.bannerWrap li:nth-child(3){background: #4B8CE0;}
+.bannerWrap li:nth-child(4){background: #3DB5F2;}
+.bannerWrap li:nth-child(5){background: #95C8FF;}
+
+/* common */
+.bgGray{background: #ccc !important;}
