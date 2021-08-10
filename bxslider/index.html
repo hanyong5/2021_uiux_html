@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxslider</title>
+    <!-- bxslider css  -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- jquery file  -->
+    <!-- script:src -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        // $(document).ready(함수)
+        // $(document).ready(function(){ 실행문; })
+        $(document).ready(function(){
+            $('.slide').bxSlider({
+                //mode:"fade",
+                //pager:false,
+                controls:false,
+                auto:true
+            }); // slider
+        }); // jquery ready
+    </script>
+
+    <style>
+        .sliderWrap{width: 1000px;margin: 0 auto;}
+        /* .slide li img{width: 100%;} */
+        .bx-wrapper {
+            -moz-box-shadow:0 none;
+            -webkit-box-shadow:0 none;
+            box-shadow:0 none;
+            border: 0 none;
+            margin-bottom: 0;
+        }
+        .bx-wrapper .bx-pager{
+            bottom: 30px;
+        }
+        .container{height: 400px;background: skyblue;}
+    </style>
+    
+
+
+</head>
+<body>
+    <div class="sliderWrap">
+        <ul class="slide">
+            <li><img src="images/pc01.jpg" alt="img1"></li>
+            <li><img src="images/pc02.jpg" alt="img2"></li>
+            <li><img src="images/pc03.jpg" alt="img3"></li>
+        </ul>
+    </div>
+    <div class="container"></div>
+
+</body>
+</html>
