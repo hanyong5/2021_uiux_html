@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container{width: 1000px;margin: 0 auto;}
+        .container li{
+            float: left;width:calc((100% - 45px)/4);
+            height: 239px;
+            margin-right: 15px;
+            position: relative;overflow: hidden;
+            cursor:pointer;
+            border-radius: 5px;
+        }
+        .container li:last-child{margin-right:0;}
+        .container li img{width: 100%;}
+        .container li .overlay{
+            width: 100%;height: 100%;
+            background: rgba(255,0,0,0.3);
+            display: flex;justify-content:center;align-items:center;
+            position: absolute;
+            top:100%;left: 0;transition:0.3s
+        }
+        .container li:hover .overlay{
+            top: 0;left: 0;
+        }
+
+        
+
+        .bg1{background: skyblue;}
+        .bg2{
+            background: url(../images/pc01.jpg) no-repeat center;
+            background-size:cover;background-attachment: fixed;
+        }
+        .pt2{padding-top: 2em;}
+        .pb2{padding-bottom: 2em;}
+        .tac{text-align: center;}
+        .mb05{margin-bottom:0.5em;}
+        .mb1{margin-bottom:1em;}
+        .line:after{
+            content:"";display: block;width: 100px;height: 2px;
+            background: #000;margin: 8px auto;
+        }
+        .shadow{
+            box-shadow:5px 5px 10px rgba(0,0,0,0.3);
+        }
+        .tshadow{
+            text-shadow:0 0 10px rgba(255,255,255,1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg1 pt2 pb2">
+        <div class="container">
+            <h3 class="tac line">GALLERY</h3>
+            <p class="tac mb1">Lorem ipsum dolor sit amet.</p>
+            <ul class="clearfix">
+                <li class="shadow">
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h3>TOUR</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="shadow">
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h3>TOUR</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="shadow">
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h3>TOUR</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="shadow">
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h3>TOUR</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </li>
+        
+        
+            </ul>
+        </div>
+    </div>
+    <div class="container pt2 pb2">
+        <h3 class="tac line">NEWS</h3>
+        <p class="tac mb1">Lorem ipsum dolor sit amet.</p>
+        <ul class="clearfix">
+            <li class="shadow">
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3>TOUR</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="shadow">
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3>TOUR</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="shadow">
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3>TOUR</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="shadow">
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3>TOUR</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </li>
+    
+    
+        </ul>
+    </div>
+    <div class="bg2 pt2 pb2 mb1">
+        <div class="container">
+            <h3 class="tac line tshadow">GALLERY</h3>
+            <p class="tac mb1 tshadow">Lorem ipsum dolor sit amet.</p>
+            <ul class="clearfix">
+                <li class="shadow">
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h3>TOUR</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="shadow">
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h3>TOUR</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="shadow">
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h3>TOUR</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="shadow">
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h3>TOUR</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </li>
+        
+        
+            </ul>
+        </div>
+    </div>
+    <div style="height: 1000px;"></div>
+</body>
+</html>
