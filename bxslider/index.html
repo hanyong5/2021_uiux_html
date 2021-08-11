@@ -23,7 +23,19 @@
                 controls:false,
                 auto:true
             }); // slider
+
+            $('.slide1st').bxSlider({
+                pager:false,
+                auto:true,
+                controls:false
+            });
+
+           
+
+
         }); // jquery ready
+
+
     </script>
 
     <style>
@@ -40,6 +52,8 @@
             bottom: 30px;
         }
         .container{height: 400px;background: skyblue;}
+
+        .slide1stWrap{width: 640px;}
     </style>
     
 
@@ -54,6 +68,15 @@
         </ul>
     </div>
     <div class="container"></div>
+    <div class="slide1stWrap">
+        <div class="slide1st">
+            <div><img src="images/pic_1.jpg" alt=""></div>
+            <div><img src="images/pic_2.jpg" alt=""></div>
+            <div><img src="images/pic_3.jpg" alt=""></div>
+            <div><img src="images/pic_4.jpg" alt=""></div>
+            <div><img src="images/pic_5.jpg" alt=""></div>
+        </div>
+    </div>
 
 </body>
 </html>
