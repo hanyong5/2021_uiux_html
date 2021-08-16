@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+h1{width: 125px;height: 30px;margin: 20px auto;background-image: url(../images/naver.png);}
+h1 a{display: block;height: 30px;text-indent: -9999px;}
+
+div.nav{width: 980px;margin: 0 auto;_background: skyblue;}
+div.nav li{
+    float: left;width: 140px;height: 50px;
+    background-image: url(../images/sprites.png);
+    background-repeat: no-repeat;transition: 0.3s;
+}
+div.nav a{display: block;height: 50px;text-indent:-9999px;}
+
+div.nav li:nth-child(1){background-position: 0 0;}
+div.nav li:nth-child(2){background-position: -140px 0;}
+div.nav li:nth-child(3){background-position: -280px 0;}
+div.nav li:nth-child(4){background-position: -420px 0;}
+div.nav li:nth-child(5){background-position: -560px 0;}
+div.nav li:nth-child(6){background-position: -700px 0;}
+div.nav li:nth-child(7){background-position: -840px 0;}
+
+div.nav li:nth-child(1):hover{background-position: 0 -50px;}
+div.nav li:nth-child(2):hover{background-position: -140px -50px;}
+div.nav li:nth-child(3):hover{background-position: -280px -50px;}
+div.nav li:nth-child(4):hover{background-position: -420px -50px;}
+div.nav li:nth-child(5):hover{background-position: -560px -50px;}
+div.nav li:nth-child(6):hover{background-position: -700px -50px;}
+div.nav li:nth-child(7):hover{background-position: -840px -50px;}
+
+div.nav li:nth-child(1).active{background-position: 0 -50px;}
+div.nav li:nth-child(2).active{background-position: -140px -50px;}
+div.nav li:nth-child(3).active{background-position: -280px -50px;}
+div.nav li:nth-child(4).active{background-position: -420px -50px;}
+div.nav li:nth-child(5).active{background-position: -560px -50px;}
+div.nav li:nth-child(6).active{background-position: -700px -50px;}
+div.nav li:nth-child(7).active{background-position: -840px -50px;}
+
+
+.visual{width: 980px;margin: 0 auto;}
+.visual .slide img{width: 100%;}
+
+
+.subVisual{
+    height: 200px;display: flex;
+    justify-content: center;align-items: center;
+}
+.subVisual.sub01{background-color:skyblue;}
+.subVisual.sub02{background-color:orange;}
