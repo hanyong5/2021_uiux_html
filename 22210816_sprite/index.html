@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprite</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div.nav{width: 980px;margin: 0 auto;_background: skyblue;}
+        div.nav li{
+            float: left;width: 140px;height: 50px;
+            background-image: url(../images/sprites.png);
+            background-repeat: no-repeat;
+        }
+        div.nav a{display: block;height: 50px;text-indent:-9999px;}
+
+        div.nav li:nth-child(1){background-position: 0 0;}
+        div.nav li:nth-child(2){background-position: -140px 0;}
+        div.nav li:nth-child(3){background-position: -280px 0;}
+        div.nav li:nth-child(4){background-position: -420px 0;}
+        div.nav li:nth-child(5){background-position: -560px 0;}
+        div.nav li:nth-child(6){background-position: -700px 0;}
+        div.nav li:nth-child(7){background-position: -840px 0;}
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <!-- ul>li*7>a[href="#"]>{menu$} -->
+        <ul class="clearfix">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            <li><a href="#">menu6</a></li>
+            <li><a href="#">menu7</a></li>
+        </ul>
+    </div>
+
+<!-- <img src="../images/sprites.png" alt=""> -->
+
+<style>
+    .box{
+        background-image: url(../images/sprites.png);height: 100px;
+        background-position: -140px 0;
+        background-repeat: no-repeat;
+        display: none;
+    }
+
+</style>
+
+<div class="box">
+
+</div>
+</body>
+</html>
