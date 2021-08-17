@@ -13,7 +13,7 @@
             <legend>아이디/비밀번호</legend>
             
             <label for="id">아이디</label>
-            <input type="text" id="id" name="id" placeholder="ID를 입력하세요"> <br>
+            <input type="text" id="id" name="id" placeholder="ID를 입력하세요" required> <br>
 
             <label for="pw">비밀번호</label>
             <input type="password" id="pw" name="pw" placeholder="PW를 입력하세요">
@@ -22,14 +22,25 @@
             <legend>상세정보</legend>
             
             <label for="s">축구</label>
-            <input type="checkbox" id="s" name="s" value="축구"> 
+            <input type="checkbox" id="s" name="s" value="축구" checked> 
             <label for="b">야구</label>
             <input type="checkbox" id="b" name="b" value="야구"> <br>
             
             <label for="m">남자</label>
-            <input type="radio" id="m" name="se" value="남자">
+            <input type="radio" id="m" name="se" value="남자" checked>
             <label for="f">여자</label>
             <input type="radio" id="f" name="se" value="여자">
+            <br>
+
+            <label for="text">추가입력</label><br>
+            <textarea name="test" id="text" cols="30" rows="10"></textarea>
+            <br>
+            <label for="sel">선택하시오</label>
+            <select name="fruit" id="sel">
+                <option value="사과">사과</option>
+                <option value="바나나">바나나</option>
+                <option value="딸기" selected>딸기</option>
+            </select>
 
         </fieldset>
         <input type="submit" value="자료전송하기">
