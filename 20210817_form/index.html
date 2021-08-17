@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+    <form action="welcome.php" method="get">
+        <fieldset>
+            <legend>아이디/비밀번호</legend>
+            
+            <label for="id">아이디</label>
+            <input type="text" id="id" name="id" placeholder="ID를 입력하세요"> <br>
+
+            <label for="pw">비밀번호</label>
+            <input type="password" id="pw" name="pw" placeholder="PW를 입력하세요">
+        </fieldset>
+        <fieldset>
+            <legend>상세정보</legend>
+            
+            <label for="s">축구</label>
+            <input type="checkbox" id="s" name="s" value="축구"> 
+            <label for="b">야구</label>
+            <input type="checkbox" id="b" name="b" value="야구"> <br>
+            
+            <label for="m">남자</label>
+            <input type="radio" id="m" name="se" value="남자">
+            <label for="f">여자</label>
+            <input type="radio" id="f" name="se" value="여자">
+
+        </fieldset>
+        <input type="submit" value="자료전송하기">
+    </form>
+</body>
+</html>
