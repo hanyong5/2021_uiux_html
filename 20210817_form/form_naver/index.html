@@ -25,8 +25,32 @@
                         <p class="field">
                             <label for="user-id" class="blind">아이디</label>
                             <input type="text" id="user-id" name="userId" placeholder="아이디입력" class="inp-field">
-                            <span class="icon">@naver.com</span>
+                            <span class="icon email">@naver.com</span>
                         </p>
+                        <p class="field">
+                            <label for="user-pass" class="blind">비밀번호</label>
+                            <input type="password" id="user-pass" name="passWord" placeholder="비밀번호입력" class="inp-field">
+                            <span class="icon pass">비밀번호</span>
+                        </p>
+                        <p class="field none">
+                            <label for="user-pass2" class="blind">비밀번호확인</label>
+                            <input type="password" id="user-pass2" name="passWord2" placeholder="비밀번호확인" class="inp-field">
+                            <span class="icon pass2">비밀번호확인</span>
+                        </p>
+                   </fieldset>
+                   <fieldset>
+                       <legend class="blind">개인정보</legend>
+                       <p class="field">
+                           <label for="user-name" class="blind">이름</label>
+                           <input type="text" id="user-name" placeholder="이름" class="inp-field w458">
+                       </p>
+                       <p class="field radio">
+                           <input type="radio" id="male" name="user-s" value="남성" checked>
+                           <input type="radio" id="female" name="user-s" value="여성">
+
+                           <label for="male" class="btn-label male">남자</label>
+                           <label for="female" class="btn-label female">여자</label>
+                       </p>
                    </fieldset> 
                </form> 
             </div>

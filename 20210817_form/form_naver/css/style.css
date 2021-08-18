@@ -5,7 +5,10 @@ body{
 }
 
 .blind{display: block;position: absolute;left: 0;top: -9999px;}
-fieldset{border: 1px solid #dadada;background-color: #fff;}
+fieldset{
+    border: 1px solid #dadada;background-color: #fff;
+    margin-bottom: 10px;
+}
 
 .wrap{
     width: 460px;margin: 0 auto;
@@ -23,7 +26,12 @@ div#header a{
     display: block;height: 44px;text-indent:-9999px
 }
 
-div#content .field{position: relative;}
+div#content .field{
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.field.none{border-bottom: 0 none !important;}
 
 div#content .field .inp-field{
     width: 350px;height: 49px;
@@ -34,6 +42,27 @@ div#content .field .icon{
     position: absolute;right: 10px;top: 0;
     background-image: url(../images/ico_join3.png);
     background-repeat: no-repeat;
-    background-position: 0 -47px;
+    _background-position: 0 -47px;
     text-indent: -999px;
 }
+div#content .field .icon.email{background-position: 0 -47px;}
+div#content .field .icon.pass{background-position: 0 -466px;}
+div#content .field .icon.pass2{background-position: 0 -515px;}
+
+p.radio>input:nth-child(1):checked ~ label.male{background: skyblue !important;}
+p.radio>input:nth-child(2):checked ~ label.female{background: skyblue !important;}
+
+div#content .field.radio{height: 50px;}
+div#content .field.radio input{position: absolute;left: 20px;top: 20px;}
+div#content .field .btn-label{
+    display: block;width: 212px;height: 31px;
+    text-align: center;line-height:31px;
+    border: 1px solid #dcdcdc;border-radius:5px;
+    position: absolute;top:10px;background: #fff;
+    cursor:pointer
+}
+div#content .field .btn-label.male{left: 15px;}
+div#content .field .btn-label.female{right: 15px;}
+
+/* common */
+.w458{width: 458px !important;}
