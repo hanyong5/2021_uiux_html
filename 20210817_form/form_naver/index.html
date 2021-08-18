@@ -51,6 +51,32 @@
                            <label for="male" class="btn-label male">남자</label>
                            <label for="female" class="btn-label female">여자</label>
                        </p>
+                       <p class="field birth clearfix">
+                           <label for="user-birth">생일</label>
+                           <input type="text" id="user-birth" name="useryear" placeholder="년도(4자)" class="inp-field w130">
+                           <span class="field-wall">|</span>
+                           <select name="month">
+                              <!-- option[value="$"]*12>{$월} -->
+                               <option value="1">1월</option>
+                               <option value="2">2월</option>
+                               <option value="3">3월</option>
+                               <option value="4">4월</option>
+                               <option value="5">5월</option>
+                               <option value="6">6월</option>
+                               <option value="7">7월</option>
+                               <option value="8">8월</option>
+                               <option value="9">9월</option>
+                               <option value="10">10월</option>
+                               <option value="11">11월</option>
+                               <option value="12">12월</option>
+                           </select>
+                           <span class="field-wall">|</span>
+                           <input type="text" name="day" placeholder="일" class="inp-field w145">
+                       </p>
+                       <p class="field">
+                        <label for="user-mail" class="blind">본인확인메일</label>
+                        <input type="text" id="user-mail" placeholder="본인확인 이메일" class="inp-field w458">
+                    </p>
                    </fieldset> 
                </form> 
             </div>

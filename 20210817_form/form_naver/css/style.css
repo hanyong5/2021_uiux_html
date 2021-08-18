@@ -64,5 +64,24 @@ div#content .field .btn-label{
 div#content .field .btn-label.male{left: 15px;}
 div#content .field .btn-label.female{right: 15px;}
 
+div#content .field.birth label{
+    float: left;width: 53px;height: 49px;line-height: 49px;text-align: center;
+    background: #f7f7f7;color:#757575;border-right: 1px solid #efefef;
+}
+div#content .field.birth input{float: left;}
+
+div#content .field.birth .field-wall{
+    float: left;width: 0;height: 29px;border-right: 1px solid #cdcdcd;
+    margin-top: 10px;text-indent:-9999px
+}
+
+div#content .field.birth select{
+    float: left;width: 110px;height: 29px;border: 0 none;
+    line-height: 29px;margin-top: 10px;margin-left:10px;margin-right:7px;
+    font-size: 15px;color:#757575
+}
+
 /* common */
 .w458{width: 458px !important;}
+.w145{width: 145px !important;}
+.w130{width: 130px !important;}
