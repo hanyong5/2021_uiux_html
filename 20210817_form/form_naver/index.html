@@ -77,7 +77,25 @@
                         <label for="user-mail" class="blind">본인확인메일</label>
                         <input type="text" id="user-mail" placeholder="본인확인 이메일" class="inp-field w458">
                     </p>
-                   </fieldset> 
+                </fieldset>
+                <fieldset>
+                    <legend class="blind">전화번호인증</legend>
+                    <p class="field confirm clearfix">
+                       <label for="user-num" class="blind">인증번호받기</label>
+                       <select name="usernum" id="user-num">
+                           <option value="082">+082</option>
+                       </select>
+                       <span class="field-wall">|</span>
+                       <input type="text" placeholder="휴대전화번호" name="user-phone" class="inp-field w202">
+                       <button type="button" class="btn-click">인증</button>
+                    </p>
+                    <p class="field confirm">
+                        <label for="user-confirm" class="blind">인증번호입력</label>
+                        <input type="text" id="user-confirm" name="userconfirm" placeholder="인증번호" class="inp-field w303">
+                        <button type="button" class="btn-click">확인</button>
+                    </p>
+                </fieldset>
+                <input type="submit" value="가입하기" class="btn-submit">
                </form> 
             </div>
         </div>
