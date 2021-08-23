@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .inp{
+            border: 0 none;
+            padding: 10px;font-size: 18px;color:#333;line-height:24px;
+        }
+        .underline{border-bottom: 3px solid #000;}
+        .round{
+            border: 3px solid #999;
+            border-radius:25px;text-indent:10px;
+        }
+
+        .box1{
+            width: 270px;border: 3px solid #999;padding: 10px;font-size: 18px;
+        }
+        input[type="submit"]{
+            border: 0 none;
+            background: orange;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;top:69px;left:234px;
+            cursor: pointer;
+        }
+        div.radio > input:nth-child(1):checked ~ label.male{background: skyblue;}
+        div.radio > input:nth-child(2):checked ~ label.female{background: orange;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="test.php" method="post">
+            <label for="user-na">이름</label>
+            <input type="text" name="username" id="user-na" class="inp underline" placeholder="이름">
+            <br>
+            <br>
+
+            <label for="user-na1">성명</label>
+            
+            <input type="text" name="username1" id="user-na1" class="inp round">
+
+            <br><br>
+
+            <div class="radio">
+                <input type="radio" id="radio1st" name="user" value="m" checked>
+                <input type="radio" id="radio2st" name="user" value="w">
+                <label for="radio1st" class="male">남자</label>
+                <label for="radio2st" class="female">여자</label>
+            </div>
+
+
+
+            <input type="submit" value="전송">
+        </form>
+
+        <div class="box1">test</div>
+    </div>
+</body>
+</html>
