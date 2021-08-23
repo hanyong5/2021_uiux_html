@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>입학원서</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		*{padding: 0;margin: 0;}
+		li{list-style:none}
+		h2{text-align: center;font-size:40px;}
+		.clearfix:after{content:"";display: block;clear: both;}
+
+		body{font-family: 'Nanum Gothic', sans-serif;font-size:14px;}
+
+		td,th{
+			border: 1px solid #000;
+			border-collapse:collapse;
+			text-align: center;
+		}
+		table{border-collapse:collapse;border: 0 none !important;}
+
+		td{height:40px;}
+        
+		.table_cell{width: 900px;border: 2px solid #000;margin: 0 auto}
+		.table_cell table{width: 100%;}
+		.table_cell .bg_gray{background: #ddd;font-weight:bold;}
+		.point{color:red;}
+		.table_cell h3{font-size:22px;text-align: center;}
+		.table_cell .detail{text-align:left;padding:40px;text-indent:-15px;padding-left:40px;font-size:16px;line-height:25px;padding-bottom:20px;}
+		.table_cell .agree{width: 100px;margin-left: auto;}
+
+		.lastView{width: 100%;font-size:25px;margin:auto;text-indent: initial;}
+		.lastView .left{float: left;width:350px;position: relative;}
+		.lastView .right{float: right;width:350px;position: relative;margin-right:10px;padding-bottom:20px;}
+		.lastView .lastRight{display: block;position: absolute;right:0;top: 0;border-bottom: 1px solid #000;padding-bottom:10px;}
+
+		/*common*/
+		.bb_none{border-bottom: 0 none !important;}
+		.fwb{font-weight: bold !important;}
+		.tal{text-align: left !important;}
+		.bold{font-weight: bold;}
+		.mb5{margin-bottom: 5px !important;}
+		.mb10{margin-bottom: 10px !important;}
+		.mb20{margin-bottom: 20px !important;}
+		.mb40{margin-bottom: 40px !important;}
+		.pl10{padding-left: 10px !important;}
+		.pt10{padding-top: 10px !important;}
+		.pb10{padding-bottom: 10px !important;}
+	</style>
+</head>
+<body>
+	<h2 class="mb10">입학지원서(일반고)</h2>
+	<div class="table_cell">
+		<table class="mb5">
+			<colgroup>
+				<col width="70">
+				<col width="150">
+				<col width="200">
+				<col width="150">
+				<col width="200">
+				<col width="140">
+			</colgroup>
+			<tr>
+				<td rowspan="4" class="fwb"><span class="point">*</span><br>인적<br>사항</td>
+				<td class="bg_gray">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</td>
+				<td>한성용</td>
+				<td class="bg_gray">학&nbsp;&nbsp;&nbsp;교&nbsp;&nbsp;&nbsp;명</td>
+				<td>oo고등학교</td>
+				<td rowspan="4">사진첨부</td>
+			</tr>
+			<tr>
+				<td class="bg_gray">주민등록번호</td>
+				<td></td>
+				<td class="bg_gray">e&nbsp;-&nbsp;mail</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="bg_gray">휴&nbsp;대&nbsp;폰(C.P)</td>
+				<td></td>
+				<td class="bg_gray">긴급연락처<br>(학부모)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="bg_gray">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</td>
+				<td colspan="3"></td>
+				
+			</tr>
+		</table>
+		<table class="bb_none">
+			<colgroup>
+				<col width="150">
+				<col width="">
+				<col width="150">
+				<col width="">
+				<col width="150">
+				<col width="">
+			</colgroup>
+			<tr>
+				<td class="bg_gray bb_none"><span class="point">*</span>추천교사명</td>
+				<td class="bb_none"></td>
+				<td class="bg_gray bb_none">연락처</td>
+				<td class="bb_none"></td>
+				<td class="bg_gray bb_none">학교연락처</td>
+				<td class="bb_none"></td>
+			</tr>
+			
+		</table>
+		<style>
+			.grad_path li{float: left;width:180px;}
+		</style>
+		<table>
+			<colgroup>
+				<col width="70">
+				<col width="180">
+				<col width="">
+			</colgroup>
+			<tr>
+				<td class="bg_gray"><span class="point">*</span>인지<br>경로</td>
+				<td>본교를 알게된 경로는<br>(중복응답가능)</td>
+				<td>
+					<ul class="grad_path clearfix tal pl10 pt10 pb10">
+						<li><input type="checkbox"> 홈페이지검색</li>
+						<li><input type="checkbox"> 인터넷검색</li>
+						<li><input type="checkbox"> 진로담당 선생님 추천</li>
+
+						<li><input type="checkbox"> 지인소개</li>
+						<li><input type="checkbox"> 모바일검색</li>
+						<li><input type="checkbox"> 간판</li>
+
+						<li><input type="checkbox"> 지하철광고</li>
+						<li><input type="checkbox"> 포스터</li>
+						<li><input type="checkbox"> HRD-NET</li>
+
+						<li><input type="checkbox"> 고용지원센터소개</li>
+						<li><input type="checkbox"> 기타( )</li>
+						
+					</ul>
+
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+		
+</body>
+</html>
