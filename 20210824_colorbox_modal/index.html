@@ -12,7 +12,7 @@
     <style>
         html,body{height: 100%;}
         body{display: flex;justify-content: center;align-items: center;}
-        
+
         .container{width: 1000px;_margin: 0 auto;}
         .container img{width: 100%;}
         .container li{
@@ -21,17 +21,33 @@
         }
         .container li:nth-child(3n){margin-right: 0;}
     </style>
+    <script>
+        $(document).ready(function(){
+            $(".modal").colorbox({
+                rel:".modal"
+            });
+
+            $(".youtube").colorbox({
+                iframe:true,
+                innerWidth:700,
+                innerHeight:394
+            })
+        });
+
+        
+    </script>
 </head>
 <body>
     <div class="container">
         <ul class="clearfix">
-            <li><a href="#"><img src="../images/img1.jpg" alt=""></a></li>
-            <li><a href="#"><img src="../images/img2.jpg" alt=""></a></li>
-            <li><a href="#"><img src="../images/img3.jpg" alt=""></a></li>
-            <li><a href="#"><img src="../images/img4.jpg" alt=""></a></li>
+            <li><a href="../images/img1.jpg" class="modal" title="앵무새"><img src="../images/img1.jpg" alt=""></a></li>
+            <li><a href="../images/img2.jpg" class="modal" title="장미"><img src="../images/img2.jpg" alt=""></a></li>
+            <li><a href="../images/img3.jpg" class="modal" title="거위"><img src="../images/img3.jpg" alt=""></a></li>
+            <li><a href="https://www.youtube.com/embed/hsLP5SLsUY0" class="youtube"><img src="../images/img4.jpg" alt=""></a></li>
             <li><a href="#"><img src="../images/img5.jpg" alt=""></a></li>
             <li><a href="#"><img src="../images/img6.jpg" alt=""></a></li>
         </ul>
     </div>
+    
 </body>
 </html>
