@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ani</title>
+    <style>
+        .box{
+            /* width: 0px;height: 200px; */
+            position: absolute;
+            background: #f00;
+            animation-name:ani;
+            animation-duration:2s; 
+
+            animation-fill-mode:forwards; /* 끝에서 멈춤*/
+            animation-iteration-count:infinite;/* 반복 */
+            animation-direction:alternate;/* 복원 */
+            animation-timing-function:linear; /* 에니메이션작동 */
+            animation-delay:1s;
+
+            
+        }
+        @keyframes ani{
+            0%{width:0px;height: 0;left: 0;}
+            100%{width: 200px;height: 200px;left: 100px;}
+            
+        }
+
+        .box1{
+            width: 20px;height: 50px;background: blue;
+            border-radius:10px;position: absolute;
+            _bottom: 30px;left: 50%;margin-left: -10px;
+            animation-name:scroll;
+            animation-duration: 1s;
+
+            animation-fill-mode:forwards; /* 끝에서 멈춤*/
+            animation-iteration-count:infinite;/* 반복 */
+            animation-direction:alternate;/* 복원 */
+
+
+        }
+        @keyframes scroll{
+            from{bottom:30px}
+            to{bottom: 50px;}
+        }
+
+        .box1 .cir{
+            width: 10px;height: 10px;background: #fff;border-radius: 50%;
+            position: absolute; left: 50%;top:5px;margin-left: -5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1">
+        <div class="cir"></div>
+    </div>
+</body>
+</html>
