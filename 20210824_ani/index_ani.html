@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ani</title>
+    <style>
+        .box{
+            width: 500px;height: 500px;background: #eee;
+            position: relative;
+        }
+        .line1{
+            width: 0;height: 10px;background: #f00;
+            /* animation-name:line1; */
+            animation-duration:0.3s;
+            animation-fill-mode:forwards;
+            animation-timing-function: linear;
+        }
+        .line2{
+            width: 10px;height: 0;background: #00f;
+            position: absolute;top: 0;right: 0;
+            /* animation-name:line2; */
+            animation-duration: 0.3s;
+            animation-fill-mode:forwards;
+            animation-timing-function: linear;
+            animation-delay:0.3s
+        }
+
+        .line3{
+            width: 0px;height: 10px;background: #00f;
+            position: absolute;bottom: 0;right: 0;
+            /* animation-name:line3; */
+            animation-duration: 0.3s;
+            animation-fill-mode:forwards;
+            animation-timing-function: linear;
+            animation-delay:0.6s
+        }
+        .line4{
+            width: 10px;height: 0px;background: #00f;
+            position: absolute;bottom: 0;left: 0;
+            /* animation-name:line4; */
+            animation-duration: 0.3s;
+            animation-fill-mode:forwards;
+            animation-timing-function: linear;
+            animation-delay:0.9s
+        }
+
+        @keyframes line1{
+            to{width: 500px;}
+        }
+
+        @keyframes line2{
+            to{height: 500px;}
+        }
+
+        @keyframes line3{
+            to{width: 500px;}
+        }
+
+        @keyframes line4{
+            to{height: 500px;}
+        }
+
+        .box:hover .line1{animation-name:line1;}
+        .box:hover .line2{animation-name:line2;}
+        .box:hover .line3{animation-name:line3;}
+        .box:hover .line4{animation-name:line4;}
+
+        .btn{
+            width: 150px;height: 50px;line-height: 50px;text-align: center;
+            background: skyblue;position: relative;cursor:pointer
+        }
+        .btn .bar{
+            width: 0;height: 5px;background: orange;
+            position: absolute;bottom: 0;right: 0;
+            /* animation-name:bar; */
+            animation-duration: 0.3s;
+            animation-fill-mode:forwards;
+        }
+        @keyframes bar{
+            to{width: 100%;}
+        }
+
+        .btn:hover .bar{animation-name:bar;}
+
+
+
+
+        .btn1{
+            width: 150px;height: 50px;line-height: 50px;text-align: center;
+            background: skyblue;position: relative;cursor:pointer
+        }
+        .btn1 .bar{
+            width: 100%;height: 5px;background: orange;
+            position: absolute;bottom: 0;
+            transform:scaleX(0.1);
+
+            /* animation-name:bar; */
+            animation-duration: 0.3s;
+            animation-fill-mode:forwards;
+        }
+        @keyframes bar1{
+            to{transform:scaleX(1)}
+        }
+
+        .btn1:hover .bar{animation-name:bar1;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+    </div>
+
+    <div class="btn">
+        button
+        <div class="bar"></div>
+    </div>
+
+
+    <div class="btn1">
+        button
+        <div class="bar"></div>
+    </div>
+</body>
+</html>
