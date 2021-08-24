@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorbox</title>
+    <link rel="stylesheet" href="css/colorbox.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <style>
+        html,body{height: 100%;}
+        body{display: flex;justify-content: center;align-items: center;}
+        
+        .container{width: 1000px;_margin: 0 auto;}
+        .container img{width: 100%;}
+        .container li{
+            float: left;width:calc(( 100% - 30px ) / 3);
+            margin-right: 15px;margin-bottom:15px;
+        }
+        .container li:nth-child(3n){margin-right: 0;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="clearfix">
+            <li><a href="#"><img src="../images/img1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../images/img2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../images/img3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../images/img4.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../images/img5.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../images/img6.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>
