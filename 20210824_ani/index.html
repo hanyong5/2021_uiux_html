@@ -36,13 +36,18 @@
 
             animation-fill-mode:forwards; /* 끝에서 멈춤*/
             animation-iteration-count:infinite;/* 반복 */
-            animation-direction:alternate;/* 복원 */
+            _animation-direction:alternate;/* 복원 */
+            _animation-timing-function: linear;
 
 
         }
         @keyframes scroll{
-            from{bottom:30px}
-            to{bottom: 50px;}
+            /* from{bottom:30px}
+            to{bottom: 50px;} */
+
+            0%,100%{bottom: 30px;}
+            50%{bottom: 50px;}
+            /* 100%{bottom: 30px;} */
         }
 
         .box1 .cir{

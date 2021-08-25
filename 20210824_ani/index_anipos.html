@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anipos</title>
+    <style>
+        /* html,body{height: 100%;} */
+        body{
+            background-image: url(../images/bg02.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        div.wrap{
+            position: absolute;
+            left:50%;top:50%;
+            /* transform:translateX(-50%) translateY(-50%); */
+            transform:translate(-50%,-50%);
+            z-index:1
+        }
+        .searchInp{
+            width: 400px;height: 50px;border-radius:25px;
+            border: 2px solid #000;font-size: 18px;text-indent:90px;
+            box-shadow: 5px 5px 0 #000,-5px -5px 0 #f00;
+        }
+        .searchTitle{
+            display: block;position: absolute;
+            width: 60px;height: 20px;
+            background: url(../images/searchtext.jpg);
+            text-indent:-9999px;
+            top:50%;transform:translateY(-50%);
+            left:20px
+        }
+        .searchBtn{
+            position: absolute;right: 10px;
+            top:50%;transform:translateY(-50%);
+            width: 40px;height: 40px;
+            border: 1px solid #aaa;
+            border-radius:50%;text-indent: -9999px;
+            background: url(../images/search.jpg) no-repeat center;
+
+        }
+        input[type="text"]:focus{outline: none;}
+        div.wrap form{position: relative;z-index: 1;}
+        .bal{
+            position: absolute;top: -200px;right:-100px;
+            animation-name:bal;
+            animation-duration:2s;
+
+            /* animation-fill-mode:forwards; */
+            animation-iteration-count:infinite;
+            animation-direction: alternate;
+        }
+        @keyframes bal{
+            /* from{top:-200px} */
+            to{top:-220px}
+        }
+
+        .air{
+            position: absolute;bottom: 0;left: 0;
+            animation-name:air;
+            animation-duration: 4s;
+
+            animation-fill-mode:forwards;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        @keyframes air{
+            from{bottom: 0;left: -500px;transform:scale(0.5)}
+            to{bottom:1500px;left:1800px;transform:scale(2)}
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <img src="../images/content2.png" alt="" class="bal">
+        <form action="#" method="post">
+            <label for="search" class="searchTitle">search</label>
+            <input type="text" id="search" placeholder="검색어를 입력하세요." class="searchInp">
+            <input type="submit" value="search" class="searchBtn">
+        </form>
+    </div>
+    <img src="../images/reallyAir.png" alt="" class="air">
+</body>
+</html>
