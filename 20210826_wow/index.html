@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /> -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="animate.css">
+  <script src="wow.js"></script>
+
+  <script>
+      new WOW().init();
+  </script>
+
+  <style>
+      
+      h1{
+          width: 100px;height: 100px;background: orange;
+          /* position: absolute;left: 50%;top: 50%;
+          margin-left: -50px;margin-top: -50px; */
+
+        }
+        .container{width: 1000px;margin: 0 auto;}
+        .test1 li{
+            float: left;width:calc( (100% - 40px) / 5);
+            background: skyblue;margin-right: 10px;
+            height: 150px;
+            display: flex;justify-content: center;align-items: center;
+            border-radius:10px
+        }
+        .test1 li:last-child{margin-right: 0;}
+
+        .mb2{margin-bottom: 2em;}
+  </style>
+</head>
+<body>
+    
+    <h1 class="wow fadeInDown"></h1>
+    <div style="height:2000px"></div>
+    <div class="container test1 mb2">
+        <ul class="clearfix">
+            <li class="wow bounceInLeft" data-wow-delay="0">test</li>
+            <li class="wow fadeInDown" data-wow-delay="0.1s">test</li>
+            <li class="wow fadeInDown" data-wow-delay="0.2s">test</li>
+            <li class="wow fadeInDown" data-wow-delay="0.3s">test</li>
+            <li class="wow fadeInDown" data-wow-delay="0.4s">test</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2 class="wow fadeInLeft" data-wow-delay="0.5s">Lorem, ipsum.</h2>
+        <p class="wow fadeInLeft" data-wow-delay="1s">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, neque!</p>
+    </div>
+    <div style="height:2000px"></div>
+
+</body>
+</html>
