@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="../css/reset.css">
 
     <style>
-        .headerTopWrap{background: #0864A3;}
-        .headerTop{width: 980px;margin: 0 auto;color:white;position: relative;_height: 50px;}
+        .headerTopWrap{background: #0763a2 url(topbg01.jpg) no-repeat center;}
+        .headerTop{width: 980px;margin: 0 auto;color:white;position: relative;height: 90px;
+            _background: #000;}
 
         /* position */
         /* h1{width: 100px;background: skyblue;}
@@ -24,15 +25,27 @@
         .headerBt{height: 50px;background: red;_margin-top: 30px;} */
 
         /* float  */
-        h1{width: 100px;background: skyblue;float: left;}
+        /* h1{width: 100px;background: skyblue;float: left;}
         .search{float: left;width: 200px;height: 50px;background: orange;margin-left: 200px;}
-        .snsMenu{float:right;width: 300px;height: 50px;background: green;}
+        .snsMenu{float:right;width: 300px;height: 50px;background: green;} */
+
+
+        /* flex  */
+        .headerTop{
+            display: flex;justify-content: space-between;align-items:center
+        }
+        h1{width: 100px;height: 50px;background: skyblue;}
+        .search{
+            width: 200px;height:50px;background: orange;
+        }
+        .snsMenu{width: 300px;height:50px;background: green;}
+
     </style>
 </head>
 <body>
     <header id="header"> <!-- 100% -->
         <div class="headerTopWrap"> <!-- 100% -->
-            <div class="headerTop clearfix"> <!-- 980 -->
+            <div class="headerTop"> <!-- 980 -->
                 <h1><a href="#">tour</a></h1>
                 <div class="search">검색</div>
                 <div class="snsMenu">sns</div>
@@ -42,5 +55,23 @@
         <div class="headerBt"></div>
 
     </header>
+
+    <style>
+        .box{
+            width: 1000px;margin: 0 auto;background: gray;
+            display: flex;justify-content:space-between;
+            flex-direction:column;align-items: center;
+            height: 400px;
+        }
+        .box div{width:100px;height: 100px;}
+        .box1{background: red;}
+        .box2{background: blue;}
+        .box3{background: green;}
+    </style>    
+    <div class="box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
 </body>
 </html>
