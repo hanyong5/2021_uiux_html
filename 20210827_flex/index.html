@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .headerTopWrap{background: #0864A3;}
+        .headerTop{width: 980px;margin: 0 auto;color:white;position: relative;_height: 50px;}
+
+        /* position */
+        /* h1{width: 100px;background: skyblue;}
+        .search{
+            position: absolute;width: 200px;height: 50px;top: 0;left:calc(50% - 150px);
+            text-align: center;background: orange;
+        }
+        .snsMenu{
+            position: absolute;width: 300px;height: 50px;background: green;
+            right: 0;top:0
+        }
+        .headerBt{height: 50px;background: red;_margin-top: 30px;} */
+
+        /* float  */
+        h1{width: 100px;background: skyblue;float: left;}
+        .search{float: left;width: 200px;height: 50px;background: orange;margin-left: 200px;}
+        .snsMenu{float:right;width: 300px;height: 50px;background: green;}
+    </style>
+</head>
+<body>
+    <header id="header"> <!-- 100% -->
+        <div class="headerTopWrap"> <!-- 100% -->
+            <div class="headerTop clearfix"> <!-- 980 -->
+                <h1><a href="#">tour</a></h1>
+                <div class="search">검색</div>
+                <div class="snsMenu">sns</div>
+            </div>
+            
+        </div>
+        <div class="headerBt"></div>
+
+    </header>
+</body>
+</html>
