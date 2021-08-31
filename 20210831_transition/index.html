@@ -45,6 +45,60 @@
             transform:translate(-50%,-50%) rotate(90deg)
         }
 
+        /*   */
+
+
+        .box2{
+            width: 300px;height: 300px;position: relative;
+            transition:0.3s;overflow: hidden;background: skyblue;
+            border: 10px solid skyblue;
+            margin: 0 auto;
+        }
+        
+        .box2:hover{border: 30px solid skyblue;}
+
+        .box2 img{
+            position: absolute;
+            left: 50%;top: 50%;
+            transform:translate(-50%,-50%) scale(1);
+            transition:0.3s;
+        }
+
+        .box2:hover img{
+            transform:translate(-50%,-50%) scale(1.1);
+        }
+
+        .box2 .bg{
+            width: 100%;height: 100%;background: #f00;
+            position: relative;
+            opacity:0;transition:0.3s
+        }
+        .box2:hover .bg{opacity:0.1}
+
+        .box2 .circle{
+            position: absolute;
+            width: 50px;height: 50px;_background: pink;
+            left:50%;top:50%;transform:translate(-50%,-50%);
+            transition:0.3s;border: 4px solid #fff;
+            border-radius:50%;
+            /* animation-name:ani;*/
+            animation-duration: 0.3s; 
+        }
+
+        @keyframes ani{
+            from{transform:translate(-50%,-50%)}
+            to{transform:translate(-50%,-50%) rotate(180deg)}
+        }
+
+        .box2:hover .circle{
+            animation-name:ani;
+            
+            /* transform:translate(-50%,-50%) rotate(90deg) */
+        }
+        
+
+
+
         .circle .bar1,
         .circle .bar2{
             width: 30px;height: 4px;background: #fff;position: absolute;
@@ -52,7 +106,6 @@
         }
 
         .circle .bar1{transform:translate(-50%,-50%) rotate(90deg)}
-        .circle .bar2{}
     </style>
 </head>
 <body>
@@ -65,7 +118,7 @@
         </div>
     </div>
 
-    
+
     <div class="box2">
         <img src="../images/testimg.jpg" alt="">
         <div class="bg"></div>
@@ -74,5 +127,56 @@
             <div class="bar2"></div>
         </div>
     </div>
+
+    <div style="height: 50px;"></div>
+
+    <style>
+
+    .box3{
+        width: 300px;height: 60px;
+        border: 1px solid #000;
+        padding-left: 20px;padding-right: 20px;
+        position: relative;
+        overflow: hidden;margin: 0 auto;
+    }
+    .box3 .txt{line-height:60px;position: relative;transition:0.3s}
+    .box3 .bar{
+        width: 2%;height: 60px;background: hotpink;
+        position: absolute;top: 0;left: 0;
+        transition:0.3s;
+    }
+
+    .box3:hover .bar{width: 100%;}
+    .box3:hover .txt{color:white}
+
+    .box3 .txt:before{
+        content:"";display: block;width: 50px;height: 2px;
+        background: #000;position: absolute;
+        right: 0;top:50%;border-radius:1px;
+        transition:0.3s;
+    }
+    .box3 .txt:after{
+        content:"";
+        display: block;width: 1px;
+        position: absolute;right:-8px;top: calc( 50% - 5px);
+        border-width: 6px;
+        border-color:transparent transparent transparent #000;
+        border-style:solid;transition:0.3s;
+    }
+
+    .box3:hover .txt:before{background: #fff;}
+    .box3:hover .txt:after{border-color:transparent transparent transparent #fff;}
+
+
+
+    </style>
+
+    <div class="box3">
+        <div class="bar"></div>
+        <p class="txt">Plotform business</p>
+    </div>
+
+
+    <div style="height: 50px;"></div>
 </body>
 </html>
