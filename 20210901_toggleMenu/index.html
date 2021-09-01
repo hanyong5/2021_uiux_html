@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .toggleMenu{
+            width: 50px;height: 50px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .toggleMenu div{
+            width: 34px;height: 5px;
+            background: #000;border-radius:3px;
+            position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+            transition:0.3s;cursor:pointer
+        }
+        .toggleMenu .bar1{top:11px}
+        .toggleMenu .bar3{top:37px}
+
+        .toggleMenu.active .bar1{
+            transform:translate(-50%,-50%) rotate(45deg);top:50%
+        }
+        .toggleMenu.active .bar2{opacity:0}
+        .toggleMenu.active .bar3{transform:translate(-50%,-50%) rotate(-45deg);top:50%}
+
+    </style>
+
+    <script>
+        $(document).ready(function(){
+
+            //$(".toggleMenu").on("click",function(){});
+
+            
+
+            $(".toggleMenu").click(function(){
+
+                console.log($(".toggleMenu").attr("class"));
+
+                if( $(".toggleMenu").attr("class") == "toggleMenu" ){
+                // if( toggleMenu  == toggleMenu){}
+                    $(".toggleMenu").addClass("active");
+                }else{
+                    $(".toggleMenu").removeClass("active");
+                }
+                // if(조건){
+                //     실행문;
+                // }else{
+                //     실행문
+                // }
+
+            });
+            
+            
+        });
+
+
+        // $(document).ready(function(){
+        //     실행문
+        // });
+
+    </script>
+
+</head>
+<body>
+
+
+    <div class="toggleMenu">
+        <!-- 
+            togglemenu click(이벤트)를 하면
+            class attribute "toggleMenu"            
+            togglemenu active 클래스를 추가 
+
+            재클릭시 
+            class attribute "toggleMenu active"
+            togglemenu active 클래스를 제거
+        -->
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <a href="http://www.naver.com" target="_blank" class="link">네이버</a>
+
+    <script>
+        
+    </script>
+    
+
+
+</body>
+</html>
