@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media toggle</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        html,body{height: 100%;}
+        .menuWrap{background: #333;}
+        .menuWrap a{color: white;}
+
+        .menuWrap h1{width: 100px;text-align: center;line-height: 50px;padding-left: 16px;}
+        .myTopMenu{position: absolute;left: 120px;top: 0;}
+        .myTopMenu a{display: block;float: left;padding: 14px 10px;}
+
+        .toggleMenu{
+            width: 50px;height: 50px;
+            _border: 1px solid #fff;
+            position: absolute;right: 16px;top: 0px;
+            display: none;
+        }
+        .toggleMenu div{
+            width: 34px;height: 5px;
+            background: #fff;border-radius: 3px;
+            position: absolute;left: 50%;top: 50%;
+            transform:translate(-50%,-50%);
+        }
+        .toggleMenu .bar1{top:14px}
+        .toggleMenu .bar3{top:36px}
+
+        .toggleMenu.active .bar1{
+            top:50%;
+            transform:translate(-50%,-50%) rotate(45deg);
+        }
+        .toggleMenu.active .bar2{opacity:0}
+        .toggleMenu.active .bar3{
+            top:50%;
+            transform:translate(-50%,-50%) rotate(-45deg);
+        }
+
+        @media screen and (min-width:900px){
+            body{background: skyblue;}
+        }
+        @media screen and (min-width:600px) and (max-width:899px){
+            body{background: orange;}
+        }
+        @media screen and (max-width:599px){
+            .toggleMenu{display: block;}
+            .myTopMenu{display: none;}
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="menuWrap">
+        <h1><a href="#">LOGO</a></h1>
+        <div class="myTopMenu">
+            <nav class="topNav clearfix">
+                <a href="#">HOME</a>
+                <a href="#"><i class="fab fa-pagelines"></i> NEWS</a>
+                <a href="#"><i class="fas fa-drumstick-bite"></i> PRODUCT</a>
+                <a href="#"><i class="fas fa-comment"></i> COMMUNITY</a>
+            </nav>
+        </div>
+        <div class="toggleMenu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+</body>
+</html>
