@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+#header{width: 1200px;margin: 0 auto}
+h1{margin: 0 auto;width: 100px;margin-bottom: 10px;}
+.gnb li{float: left;width: calc(100% / 6);background: skyblue;}
+.gnb li:hover{background: orange;}
+.gnb a{display: block;line-height:40px;text-align: center;}
+
+.visual{height: 300px;background: green;}
+
+.contents{width: 1200px;background: pink;margin: 0 auto;}
+.contents .section{width: 900px;height: 1000px;background: skyblue;float: left;}
+.contents .aside{width: 280px;height: 1000px;background: gray;float:right}
+
+#footer{width: 1200px;padding: 20px;margin: 0 auto;background: green;}
