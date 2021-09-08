@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    <style>
+        .box{float: left;}
+    </style>
+
+    <script>
+        // for(초기값;조건문;증가식){}
+        // for(var i=0;i<10;i++){
+        //     document.write(i+"<br>")
+        // }
+        document.write(0 + "<br>");
+        document.write(1 + "<br>");
+        document.write(2 + "<br>");
+        document.write(3 + "<br>");
+        document.write(4 + "<br>");
+        document.write(5 + "<br>");
+        document.write(6 + "<br>");
+        document.write(7 + "<br>");
+        document.write(8 + "<br>");
+        document.write(9 + "<br>");
+        for(var j=1;j<=9;j++){
+            //document.write("3 x " + j + " =" + j*3 + "<br>")
+            document.write(`3 x ${j} = ${j*3} <br>`)
+        }
+
+        for(let i=2;i<=5;i++){
+            document.write(`<div class="box">구구단 ${i}단<br>`);
+            for(let j=1;j<10;j++){
+                document.write(`${i} x ${j} = ${i*j}  <br>`)
+            }
+            document.write(`</div>`)
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
