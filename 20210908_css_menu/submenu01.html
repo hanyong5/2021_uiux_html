@@ -17,17 +17,18 @@
     </script>
     <style>
         .slider>li>img{width: 100%;}
-        .submenu{display: none;}
+        /* .submenu{display: none;;transition:0.3s} */
 
-        .gnb{width: 1000px;margin: 0 auto;position: relative;z-index:1;}
-        .gnb>ul>li{float: left;width: calc(100% / 4);background: skyblue;transition:0.3s;position: relative;}
-        .gnb>ul>li>a{display: block;line-height: 40px;text-align: center;}
+        .gnb{width: 1000px;margin: 0 auto;position: relative;z-index: 1;}
+        .gnb>ul>li{float: left;width: calc(100% / 4);background: skyblue;transition:0.3s;position: relative;;}
+        .gnb>ul>li>a{display: block;line-height: 40px;text-align: center;position: relative;z-index: 1;background: red;}
         .gnb>ul>li:hover{background: red;}
-        .gnb>ul>li:first-child .submenu{display: block;}
+        /* .gnb>ul>li:first-child .submenu{display: block;} */
+        .gnb>ul>li:hover .submenu{top:40px;}
         
-        .submenu{
-            position: absolute;;background:red;width: 100%;
-        }
+        .submenu{position: absolute;top:-200%;width: 100%;background: red;transition:0.3s}
+        .submenu a{text-align: center;display: block;line-height: 30px;font-size: 14px;}
+        .submenu a:hover{background: pink;}
     </style>
 
 </head>
