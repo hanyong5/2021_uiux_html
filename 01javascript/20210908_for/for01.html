@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const dan = 5;
+        // document.write(dan + " x 1 = " + dan*1 + "<br>");
+        // document.write(dan + " x 2 = " + dan*2);
+        // document.write(dan + " x 3 = " + dan*3);
+        // document.write(dan + " x 4 = " + dan*4);
+        // document.write(dan + " x 5 = " + dan*5);
+        // document.write(dan + " x 6 = " + dan*6);
+        // document.write(dan + " x 7 = " + dan*7);
+        // document.write(dan + " x 8 = " + dan*8);
+        
+        for(let i=1;i<10;i++){
+            // document.write(`${dan} x ${i} = ${dan*i}<br>`);
+            document.write(dan + " x " + i + " = " + dan*i + "<br>")
+        }
+
+        for(let i=2;i<10;i++){
+            document.write(`
+                <div class="dan">
+                    <h2>${i}단</h2>
+            `)
+            for(let z=1;z<10;z++){
+                document.write(`${i} x ${z} = ${i*z}<br>`)
+            }
+            document.write(`</div>`)
+        }
+    </script>
+    <style>
+        .dan{float: left;padding: 10px;border: 1px solid #000;}
+    </style>
+</head>
+<body>
+
+    <ul>
+    <script>
+        for(let i=1;i<4;i++){
+            document.write(
+                `<li><img src="../../images/pc0${i}.jpg" alt=""></li>`
+            )
+        }
+    </script>
+    </ul>
+
+    <script>
+        let x = 1;
+        let sum = 0;
+        while( x <= 100 ){
+            sum = sum + x; //sum += x;
+            x++; // x = x + 1
+            document.write(sum)
+        }
+        document.write(sum)
+    </script>
+
+    
+    
+</body>
+</html>
