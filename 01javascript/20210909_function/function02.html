@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    10의 총합은 <span id="hap" class="han">0</span> 입니다.
+    <span class="han">han</span>
+    <script>
+        // let result;
+        function add(name,n){
+            let sum = 0;
+            for(let i=1;i<=n;i++){
+                sum = sum + i;
+            }
+            return sum;
+        }
+        let result = add("홍길동",10);
+        let result1 = add("이순신",100)
+
+        // document.write("총합은 " + result + "입니다.");
+        // document.write(`총합은 ${result} 입니다.`)
+        document.getElementById("hap").innerHTML = result1;
+        // $("#hap").html(result);
+        const han = document.getElementsByClassName("han")[1];
+        han.style.backgroundColor = "red";
+        han.style.color="white";
+        han.style.display = "block"
+        // $(".han").eq(0).css("color","red")
+        //$(".han").eq(0).css({color:"red","background-color":"blue",display:"block"})
+    </script>
+</body>
+</html>

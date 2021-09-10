@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <style>
+        .view{width:1000px;background: skyblue;margin: 0 auto;}
+        .view li{float: left;width: calc(100% / 5);position: relative;}
+        .view li img{width: 100%;}
+        .view li h3{
+            position: absolute;left: 50%;top:50%;
+            transform:translate(-50%,-50%);color:white
+        }
+        .view .bg{
+            position: absolute;left: 0;top: 0;
+            background: rgba(0,0,255,0.3);
+            width: 100%;height: 100%;
+            opacity:0;transition:0.3s
+        }
+        .view li:hover .bg{opacity: 1;}
+    </style>
+</head>
+<body>
+    <script>
+        const city = ["seoul","busan","incheon"];
+        for(let i=0;i<city.length;i++){
+            document.write(city[i] + "<br>");
+        }
+        
+    </script>
+
+    <script>
+        const img = [
+            "img1.jpg",
+            "img2.jpg",
+            "img3.jpg",
+            "img4.jpg",
+            "img5.jpg",
+            "img6.jpg",
+            "img7.jpg",
+            "img1.jpg",
+            "img2.jpg",
+            "img3.jpg"
+        ];
+        const imgTxt = [
+            "txt1","txt2","txt3","txt4","txt5","txt6","txt7","txt8","txt9","txt0"
+        ]
+
+        document.write("<ul class='view clearfix'>")
+        for(let i=0;i<img.length;i++){
+            document.write(`
+            <li>
+                <img src="../../images/${img[i]}">
+                <div class="bg"></div>
+                <h3>${imgTxt[i]}</h3>
+            </li>
+            `)
+        }
+        document.write("</ul>")
+
+    </script>
+</body>
+</html>
