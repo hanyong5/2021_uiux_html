@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script>
+        const name = "한성용";
+        const city = ["서울","경기","부산","대전"];
+        const han = [80,50,40,30,90];
+
+        // document.write(city[0]);
+        // document.write(city[1]);
+        // document.write(city.length)
+
+        for(let i=0;i<city.length;i++){
+            // document.write(city[i]+"<br>");
+            document.write(`${i+1} 번째 도시명 : ${city[i]} <br>`)
+        }
+
+        let sum=0;
+        for(let i=0;i<han.length;i++){
+            sum= sum + han[i];
+        }
+        //document.write(sum/han.length);
+
+       
+
+    </script>
+</head>
+<body>
+    국어 : <span id="sub1">0</span>점<br>
+    영어 : <span id="sub2">0</span>점<br>
+    수학 : <span id="sub3">0</span>점<br>
+    과학 : <span id="sub4">0</span>점<br>
+    기술 : <span id="sub5">0</span>점<br>
+    합계 : <span id="total">0</span>점<br>
+    평균 : <span id="avg">0</span>점<br>
+    <script>
+         document.getElementById("sub1").innerHTML = han[0];
+         document.getElementById("sub2").innerHTML = han[1];
+         document.getElementById("sub3").innerHTML = han[2];
+         document.getElementById("sub4").innerHTML = han[3];
+         document.getElementById("sub5").innerHTML = han[4];
+         document.getElementById("total").innerHTML = sum;
+         document.getElementById("avg").innerHTML = sum/han.length;
+    </script>
+</body>
+</html>

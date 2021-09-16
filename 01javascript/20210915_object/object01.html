@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box3{
+            width: 15px;height: 15px;display: inline-block;
+            border-radius: 50%;background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    자동차 이름은 <span class="box1">미정</span><br>
+    속도는 <span class="box2">0</span>km/h<br>
+    색상은 <span class="box3" ></span><br>
+
+    <button onclick="carData()">자료1</button>
+    <script>
+        const city = ["서울","부산","대구","인천"];
+
+        const car = {
+            name:"소나타",
+            speed:100,
+            color:"skyblue",
+            start:function(){
+                //return car.speed+10;
+                return this.speed + 100;
+            }
+        }
+        // document.write(car.speed);
+        // document.write(car.start());
+
+        
+        function carData(){
+            document.getElementsByClassName("box1")[0].innerHTML = car.name;
+            document.getElementsByClassName("box2")[0].innerHTML = car.speed;
+            document.querySelector(".box3").style.background = car.color;
+        }
+        //carData()
+        
+    </script>
+</body>
+</html>

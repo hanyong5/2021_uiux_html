@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sub{color:red}
+    </style>
+</head>
+<body>
+    이름 : <span class="name"></span><br>
+    국어 : <span class="sub">0</span>점<br>
+    영어 : <span class="sub">0</span>점<br>
+    수학 : <span class="sub">0</span>점<br>
+    과학 : <span class="sub">0</span>점<br>
+    기술 : <span class="sub">0</span>점<br>
+    합계 : <span class="total">0</span>점<br>
+    평균 : <span class="avg">0</span>점<br>
+
+    <script>
+        const member1 = ["한성용",80,90,50,40,70];
+        let total;
+        let avg;
+        
+        total = member1[1] + member1[2] + member1[3] +member1[4] + member1[5];
+        avg = total / ( member1.length - 1 );
+
+        document.getElementsByClassName("name")[0].innerHTML = member1[0];
+        document.getElementsByClassName("sub")[0].innerHTML = member1[1];
+        document.getElementsByClassName("sub")[1].innerHTML = member1[2];
+        document.getElementsByClassName("sub")[2].innerHTML = member1[3];
+        document.getElementsByClassName("sub")[3].innerHTML = member1[4];
+        document.getElementsByClassName("sub")[4].innerHTML = member1[5];
+        document.getElementsByClassName("total")[0].innerHTML = total;
+        document.getElementsByClassName("avg")[0].innerHTML = avg;
+
+        
+
+
+        const spanTag = document.getElementsByTagName("span");
+
+        // spanTag[0].style.background = "blue"
+        // spanTag[0].style.color = "white"
+
+        for(let i=0;i<spanTag.length;i++){
+            spanTag[i].style.background = "blue"
+            spanTag[i].style.color = "white" 
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

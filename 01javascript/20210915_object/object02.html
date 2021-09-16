@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <style>
+        .table li{float: left;}
+        .test{display: flex;}
+    </style>
+</head>
+<body>
+    <script>
+        const mem = ["한성용","홍길동","이순신"]
+        const kor = [80,50,30];
+        const eng = [70,50,100];
+
+        for(let i=0;i<mem.length;i++){
+            //document.write(mem[i]+"<br>");
+            document.write(`
+            <ul class="table clearfix">
+                <li>${mem[i]}</li>
+                <li>${kor[i]}</li>
+                <li>${eng[i]}</li>
+            </ul>
+            `)
+        }
+
+
+        const mem1 = [
+            {name:"한성용",kor:80,eng:50},
+            {name:"홍길동",kor:70,eng:50},
+            {name:"이순신",kor:50,eng:100},
+            {name:"똘이",kor:70,eng:100}
+        ]
+
+        let memTotal = "";
+        for(let i=0;i<mem1.length;i++){
+            // memTotal = memTotal + mem1[i].name;
+            memTotal += `
+                <ul class="table clearfix">
+                    <li>${mem1[i].name}</li>
+                    <li>${mem1[i].kor}</li>
+                    <li>${mem1[i].eng}</li>
+                </ul>
+            `;
+        }
+        document.write(memTotal)
+    </script>
+</body>
+</html>
