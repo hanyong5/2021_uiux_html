@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box span{color:red}
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit <span>amet</span>, consectetur adipisicing elit. <span>Tenetur</span> libero non aut id <span>mollitia!</span> Quidem magni sed delectus ipsum <span>quibusdam.</span>
+    </div>
+
+    <span>test</span>
+    <button class="btn">클릭</button>
+    <script>
+        // 버튼 class의 .btn 클릭 해서  리스너등록(.box의 폰트색을 red 변경) => 함수
+        
+        const btn = document.getElementsByClassName("btn");
+        const box = document.getElementsByClassName("box");
+
+        // 2 리스너를 프로퍼티로 등록
+        // btn[0].onclick = onBox;
+        // function onBox(){
+        //     box[0].style.color = "red";
+        // }
+
+        // btn[0].onclick = function(){
+        //     box[0].style.color = "red";
+        // }
+
+        
+        //3 addEventListener() 메소드 활용
+
+        // span dom 구해서 => 컬렉션 
+
+        const span = document.getElementsByTagName("span");
+        const spanSel = document.querySelectorAll(".box span");
+
+
+        //const spanAll = document.getElementsByClassName("box")[0].getElementsByTagName("span");
+        const spanAll = box[0].getElementsByTagName("span");
+
+
+
+        btn[0].addEventListener("click",function(){
+
+            // box[0].style.color = "blue";
+            // box[0].style.fontSize = "40px";
+
+            // span[0].style.color = "blue"
+            // span[1].style.color = "blue"
+            // span[2].style.color = "blue"
+            // span[3].style.color = "blue"
+
+            for(let i=0;i<spanAll.length;i++){
+                spanAll[i].style.color = "blue"
+            }
+
+        });
+
+        // btn[0].addEventListener("click",onBox);
+        // function onBox(){}
+
+
+
+        // jquery 
+        // $(".btn").click(function(){
+        //     $(".box span").css("color","red")
+        // })
+
+
+       
+    </script>
+</body>
+</html>

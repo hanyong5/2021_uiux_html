@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <div class="first" id="first" >
+        <img src="../../images/img1.jpg" alt="">
+    </div>
+    <button onclick="imgCh()">사진변경</button>
+    <script>
+        const div = document.getElementById("first");
+
+        function imgCh(){
+            div.innerHTML = "<img src='../../images/img2.jpg'>"
+        }
+        function outCh(){
+            div.innerHTML = "<img src='../../images/img1.jpg'>"
+        }
+        
+    </script>
+    
+</body>
+</html>
