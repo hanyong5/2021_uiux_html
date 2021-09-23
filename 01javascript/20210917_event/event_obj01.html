@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">마우스오버</p>
+    
+    <button onclick="f(event)">클릭</button>
+
+    <a href="http://www.naver.com" onclick="f(event)">naver</a>
+
+    <div style="height: 1000px;"></div>
+
+    <a href="#" onclick="return false">test</a>
+    <a href="javascript:void(0)">test1</a>
+
+    <script>
+        function f(e){
+            console.log(e.type);
+            e.preventDefault();
+        }
+
+        document.querySelector("#p").onmouseover = f;
+        document.add
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;height: 100px;
+            background: skyblue;
+            position: relative;left:-100%;
+            transition:0.3s
+        }
+    </style>
+</head>
+<body>
+    <div id="txt" class="txt">오버값</div>
+    <p id="p" class="p">마우스오버</p>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">5</div>
+    <div class="box">5</div>
+    <div class="box">5</div>
+    <div class="box">5</div>
+    <div class="box">5</div>
+    <div class="box">5</div>
+    
+    
+
+    </div>
+
+    <script>
+        // document.getElementsByTagName("p")[0].onmouseover = function(){
+        //     console.log("hi");
+        //     document.getElementsByTagName("p")[0].style.background = "skyblue"
+
+        // }
+
+        // const pId = document.getElementById("p");
+        // pId.onmouseover=function(){
+        //     pId.style.background = "red";
+        //     pId.style.color="white"
+        // }
+        // pId.onmouseout=function(){
+        //     pId.style.background = "initial";
+        //     pId.style.color = "initial";
+        // }
+
+        // const pClass = document.getElementsByClassName("p");
+
+        // pClass[0].onmouseover = function(){
+        //     pClass[0].style.background = "skyblue"
+        // }
+        // pClass[0].onmouseout = function(){
+        //     pClass[0].style.background = "initial"
+        // }
+
+        const pSel = document.querySelector(".p");
+        const divTxt = document.querySelectorAll(".txt");
+        //const divBox = document.querySelector(".box")
+        const divBox = document.querySelectorAll(".box");
+
+        pSel.onmouseover = over;
+        pSel.onmouseout = out;
+
+        function over(){
+            //pSel.style.border = "1px solid #000"
+            pSel.style.borderColor = "#000";
+            pSel.style.borderStyle = "solid";
+            pSel.style.borderWidth = "1px";
+            pSel.style.backgroundColor = "skyblue"
+            //pSel.style.padding = "20px";
+            divTxt[0].innerHTML = "마우스오버됨";
+
+
+            
+           for(let i=0;i<divBox.length;i++){
+            divBox[i].style.left = 0;
+            //divBox[i].style.transitionDelay = "0."+i+"s";
+            divBox[i].style.transitionDelay = `${i/10}s`;
+           
+           }
+
+            // divBox[0].style.left = 0;
+            // divBox[1].style.left = 0;
+            // divBox[2].style.left = 0;
+            // divBox[3].style.left = 0;
+            // divBox[4].style.left = 0;
+            
+
+
+        }
+        function out(){
+            pSel.style.border = "initial";
+            pSel.style.padding = "initial"
+            pSel.style.background = "initial"
+            divTxt[0].innerHTML = "마우스아웃";
+
+
+            for(let i=0;i<divBox.length;i++){
+                divBox[i].style.left = "-100%"
+            }
+
+            // divBox[0].style.left = "-100%"
+            // divBox[1].style.left = "-100%"
+            // divBox[2].style.left = "-100%"
+            // divBox[3].style.left = "-100%"
+            // divBox[4].style.left = "-100%"
+        }
+
+
+
+    </script>
+</body>
+</html>
