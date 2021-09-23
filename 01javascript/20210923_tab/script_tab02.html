@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        .tab{display: flex;}
+        .tab li{
+            width: 100px;text-align: center;
+            padding:10px 0
+        }
+        .tab li.on{background: skyblue;}
+
+        .box div{display: none;width: 200px;padding:20px}
+        .box div:first-child{display: block;}
+
+    </style>
+</head>
+<body>
+    <ul class="tab">
+        <li class="on">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+        <li>tab4</li>
+    </ul>
+    <div class="box">
+        <div>1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, id.</div>
+        <div>2Omnis error nihil id temporibus vero ad perspiciatis commodi numquam!</div>
+        <div>3Numquam perferendis assumenda, qui autem totam aperiam quasi sequi voluptatum?</div>
+        <div>4Quasi perferendis vero nobis deserunt fugit debitis eaque praesentium rerum?</div>
+    </div>
+
+    <script>
+        const tabList = document.querySelectorAll(".tab li");
+
+        
+        for(let j=0;j<tabList.length;j++){
+
+            tabList[j].onclick = function(){
+               
+                for(let i=0;i<tabList.length;i++){
+                    tabList[i].classList.remove("on"); // addClass() removeClass("on")
+                }
+                //this.classList.add("on");
+                tabList[j].classList.add("on");
+
+            }
+
+        }
+
+       
+
+        // tabList[0].onclick = function(){
+        //     for(let i=0;i<tabList.length;i++){
+        //         tabList[i].classList.remove("on"); // addClass() removeClass("on")
+        //     }
+        //     //this.classList.add("on");
+        //     tabList[0].classList.add("on");
+        // }
+        // tabList[1].onclick = function(){
+        //     for(let i=0;i<tabList.length;i++){
+        //         tabList[i].classList.remove("on"); // addClass() removeClass("on")
+        //     }
+        //     //this.classList.add("on");
+        //     tabList[1].classList.add("on");
+        // }
+        // tabList[2].onclick = function(){
+        //     for(let i=0;i<tabList.length;i++){
+        //         tabList[i].classList.remove("on"); // addClass() removeClass("on")
+        //     }
+        //     //this.classList.add("on");
+        //     tabList[2].classList.add("on");
+        // }
+        // tabList[3].onclick = function(){
+        //     for(let i=0;i<tabList.length;i++){
+        //         tabList[i].classList.remove("on"); // addClass() removeClass("on")
+        //     }
+        //     //this.classList.add("on");
+        //     tabList[3].classList.add("on");
+        // }
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
