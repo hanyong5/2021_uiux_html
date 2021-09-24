@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //$("p").hide()
+            //$("p").eq(0).hide().show();
+            $("p").eq(0).css("background-color","#ff0");  //set
+            let pBg = $("p").eq(0).css("background-color") // get
+            console.log(pBg);
+            console.log($("p").length);
+
+            $(".btn").on("click",function(){
+                $("p").eq(1).css({
+                    "background":"skyblue",
+                    "border":"1px solid #000",
+                    "position":"relative",
+                    "left":"100px"
+                })
+            });
+
+            $(".btn1").click(function(){
+                $("p").eq(1).css({
+                    "background":"white",
+                    "border":"initial",
+                    "position":"initial"
+                });
+                //$("p").eq(1).attr("style","")
+            });
+
+            
+
+        });
+        
+    </script>
+</head>
+<body>
+    <button class="btn">변경</button>
+    <button class="btn1">원래대로</button>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum illo quos officiis quaerat ab iste repudiandae veritatis tempora fuga, enim, quibusdam officia iure ea. Reprehenderit a impedit eius corporis!</p>
+    <p>Sit repellat illo inventore culpa! Voluptate quisquam ratione quas tempora qui, quae fuga blanditiis error exercitationem pariatur magni dignissimos voluptatum culpa beatae. Nostrum voluptatem beatae quae nobis, facilis temporibus qui?</p>
+    <p>Tempore accusantium eaque corrupti ab nobis perferendis dignissimos et, cumque excepturi illo minus provident ea ut nihil beatae dolorum! Architecto iusto iure aliquam voluptates similique ipsa repellat vero recusandae sit!</p>
+    <p>Laboriosam ea in porro, architecto ratione necessitatibus quasi modi! Voluptas molestias amet beatae natus sequi, dolorem similique, aliquid voluptatum doloribus fugiat iusto soluta temporibus maxime velit eius! Sunt, consectetur ipsam.</p>
+    <script>
+        
+        
+        // for(let i=0;i<4;i++){
+        //     document.getElementsByTagName("p")[i].style.display = "none";
+        // }
+    </script>
+</body>
+</html>

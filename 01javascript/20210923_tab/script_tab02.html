@@ -22,10 +22,10 @@
 </head>
 <body>
     <ul class="tab">
-        <li class="on">tab1</li>
-        <li>tab2</li>
-        <li>tab3</li>
-        <li>tab4</li>
+        <li class="on" data-num="0">tab1</li>
+        <li data-num="1">tab2</li>
+        <li data-num="2">tab3</li>
+        <li data-num="3">tab4</li>
     </ul>
     <div class="box">
         <div>1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, id.</div>
@@ -36,6 +36,7 @@
 
     <script>
         const tabList = document.querySelectorAll(".tab li");
+        const boxCon = document.querySelectorAll(".box div");
 
         
         for(let j=0;j<tabList.length;j++){
@@ -45,8 +46,13 @@
                 for(let i=0;i<tabList.length;i++){
                     tabList[i].classList.remove("on"); // addClass() removeClass("on")
                 }
+
+                for(let i=0;i<tabList.length;i++){
+                    boxCon[i].style.display = "none";
+                }
                 //this.classList.add("on");
                 tabList[j].classList.add("on");
+                boxCon[j].style.display = "block"
 
             }
 

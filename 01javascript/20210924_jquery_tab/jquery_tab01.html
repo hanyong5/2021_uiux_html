@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .tab li{float: left;padding:10px 20px}
+        .tab li.on{background: skyblue;}
+        .con div{display: none;}
+        .con div:first-child{display: block;}
+    </style>
+
+</head>
+<body>
+    <ul class="tab clearfix">
+        <li class="on">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+
+    <div class="con">
+        <div>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloribus fugiat, totam obcaecati, dolorem aut commodi labore ea dolor, praesentium ut consectetur! Nihil consequatur dolor laboriosam quo similique eos aperiam.</div>
+        <div>2 Deserunt architecto enim est? In optio quae doloremque et qui eveniet consectetur velit consequatur repellendus animi libero ducimus debitis nemo autem necessitatibus quidem deserunt atque ut, nisi voluptatem culpa reprehenderit!</div>
+        <div>3 Magni iure unde eaque consequatur quas quis quaerat maxime, tempore nisi itaque, alias dolorum at quos ut, voluptate a magnam laboriosam suscipit! Fuga quisquam commodi sint obcaecati, eum officiis exercitationem.</div>
+        <div>4 Quisquam perspiciatis autem, perferendis labore esse aliquid voluptas repudiandae porro ex neque eos dolorum aliquam deserunt libero magni fuga modi quaerat. Dolores aperiam labore fugit recusandae sequi magnam ipsam. Maxime!</div>
+    </div>
+    <script>
+        // $("ul>li").eq(0).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(0).addClass("on");
+        // });
+
+        // $("ul>li").eq(1).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(1).addClass("on");
+        // });
+
+        // $("ul>li").eq(2).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(2).addClass("on");
+        // });
+
+        // $("ul>li").eq(3).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(3).addClass("on");
+        // });
+
+
+        // for(let i=0;i<$("ul>li").length;i++){
+        //     $("ul>li").eq(i).click(function(){
+        //         $("ul>li").removeClass();
+        //         $("ul>li").eq(i).addClass("on");
+        //     });
+        // }
+
+        $("ul>li").click(function(){
+
+            let num = $(this).index();
+            
+            $("ul>li").removeClass();
+            $(this).addClass("on");
+
+            $(".con>div").hide();
+            $(".con>div").eq(num).fadeIn();
+        })
+        
+
+
+
+
+
+
+
+        
+
+    </script>
+</body>
+</html>
