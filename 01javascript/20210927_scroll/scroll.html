@@ -10,14 +10,30 @@
         body{height: 200vh;background: skyblue;}
         .box{
             position: fixed;padding: 20px;border: 1px solid #000;
-            right: 0;background: #fff;
+            right: 0;background: #fff;z-index: 1;
         }
 
         .menu{
-            width: 500px;height: 50px;background: #000;
+            width: 500px;height: 100px;background: #000;
             position: absolute;left: 50%;top: 20px;
-            transform:translateX(-50%)
+            transform:translateX(-50%);transition:0.3s
         }
+        .menu.fixed{
+            position: fixed;top:0;height:50px;
+            width: 100%;
+        }
+
+        .car1{
+            position: relative;
+            left:0;transition:0.3s;
+            opacity: 0;
+        }
+        .car1.end{
+            left: 300px;
+            opacity: 1;
+        }
+
+
     </style>
 </head>
 <body>
@@ -50,6 +66,7 @@
         <p>18</p>
         <p>19</p>
         <p>20</p>
+        
         <p>21</p>
         <p>22</p>
         <p>23</p>
@@ -130,6 +147,7 @@
         <p>98</p>
         <p>99</p>
         <p>100</p>
+        <img src="../images/car.png" alt="" class="car1">
         <p>101</p>
         <p>102</p>
         <p>103</p>
@@ -233,18 +251,30 @@
     </div>
 
     <script>
+
+        const menu = document.querySelector(".menu");
+        const car1 = document.querySelector(".car1");
+
         window.addEventListener("scroll",function(){
             let scroll = window.pageYOffset;
             let y = document.querySelector(".scroll");
-            const menu = document.querySelector(".menu");
+            //const menu = document.querySelector(".menu");
             y.innerHTML = scroll;
 
             if(scroll > 500){
-                menu.style.position = "fixed";
-                menu.style.top = "0";
+                // menu.style.position = "fixed";
+                // menu.style.top = "0";
+                menu.classList.add("fixed"); // jquery addClass("fixed")
             }else{
-                menu.style.position = "absolute"
-                menu.style.top = "20px"
+                // menu.style.position = "absolute"
+                // menu.style.top = "20px"
+                menu.classList.remove("fixed"); // jquery removeClass("fixed")
+            }
+
+            if(scroll > 1640){
+                car1.classList.add("end");
+            }else{
+                car1.classList.remove("end");
             }
            
 
