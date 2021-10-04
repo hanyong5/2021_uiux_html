@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .glaylayer{
+            position: fixed;width: 100%;height: 100%;
+            background: #000;top: 0;left: 0;opacity: 0.3;
+            display: none;
+        }
+        .overlayer{
+            position: fixed;_width: 300px;_height: 300px;background: #fff;
+            left: 50%;top: 50%;transform:translate(-50%,-50%);
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("body").append(`
+                <div class="glaylayer"></div>
+                <div class="overlayer"></div>
+            `);
+
+            $("a.modal").click(function(e){
+                e.preventDefault(); //a tag href 기본이벤트를 막아줌
+                $(".glaylayer").fadeIn();
+
+                // let ahref = $("a.modal").attr("href");
+                let ahref = $(this).attr("href");
+                console.log(ahref)
+                $(".overlayer").fadeIn().html(`<img src="${ahref}">`);
+            });
+
+            $(".glaylayer,.overlayer").click(function(){
+                $(".glaylayer,.overlayer").hide()
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <a href="../images/testimg.jpg" class="modal">
+        <img src="../images/testimg.jpg" alt="">
+    </a>
+    <a href="../images/img1.jpg" class="modal">
+        <img src="../images/img1.jpg" alt="">
+    </a>
+    <a href="../images/img2.jpg" class="modal">
+        <img src="../images/img2.jpg" alt="">
+    </a>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval</title>
+</head>
+<body>
+    <button onclick = "myClick()">클릭</button>
+    <script>
+        function myClick(){
+            // setInterval(function(){console.log("hello")},3000);
+            setInterval("f()",3000)
+        }
+        function f(){
+            console.log("hello")
+        }
+
+
+        
+
+    </script>
+
+    <div>
+        <span id="div">자동 회전하는 텍스트입니다. </span>
+    </div>
+
+    <script>
+        const div = document.querySelector("#div");
+        // const div = document.getElementById("div")
+        setInterval("doRotate()",200);
+ 
+        function doRotate(){
+            let str = div.innerHTML;
+            let firstChr = str.substr(0,1)
+            let remains = str.substr(1,str.length-1);
+            str = remains + firstChr;
+            console.log(str)
+
+            div.innerHTML = str;
+
+ 
+        }
+    </script>
+
+
+</body>
+</html>

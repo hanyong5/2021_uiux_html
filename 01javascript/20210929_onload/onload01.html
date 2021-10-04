@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+
+    <script>
+
+        // window.onload = function(){
+        //     alert('load1')
+        // }
+        function gogo(){
+            alert("load")
+        }
+    </script>
+</head>
+<body onload="gogo()">
+    <button class="btn">버튼</button>
+    <button class="btn1">버튼</button>
+    <script>
+        // document.querySelector(".btn").onclick = function(){
+        //     alert("누름금지1")
+        // }
+
+        document.querySelector(".btn").onclick = noClick;
+        function noClick(){
+            alert("noClick")
+        }
+
+        document.querySelector(".btn1").addEventListener("click",noclick1);
+        function noclick1(){
+            alert("noclick1")
+        }
+    </script>
+</body>
+</html>

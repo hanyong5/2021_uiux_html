@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="winOpen('http://www.naver.com')">네이버창열기</button> 
+   <button onclick="winOpen('http://www.daum.net')">다음창열기</button> 
+   <button onclick="winOpen('popup.html')">창열기</button> 
+   <script>
+       function winOpen(url){
+           window.open(url,"test","width=500,height=500")
+       }
+   </script>
+</body>
+</html>

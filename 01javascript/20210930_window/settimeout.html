@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set timeout</title>
+</head>
+<body>
+    <img src="../images/testimg.jpg" alt="" title="에펠탑" 
+    onmouseover="startTimer(5000)"
+    onmouseout = "cancelTimer()"
+    >
+
+    <script>
+        let timerId = null;
+
+        function startTimer(time){
+            
+            timerId = setTimeout("load()",time);
+            console.log(timerId)
+        }
+        function load(){
+           window.location = "http://www.naver.com"
+        }
+        function cancelTimer(){
+            if(timerId != null){
+                clearTimeout(timerId);
+            }
+        }
+    </script>
+</body>
+</html>
