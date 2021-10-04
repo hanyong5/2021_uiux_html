@@ -30,7 +30,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         include G5_BBS_PATH.'/newwin.inc.php'; // 팝업레이어
     }
     ?>
-    
+
     <div id="hd_wrapper">
 
         <div id="logo">
@@ -42,7 +42,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <h2>메인메뉴</h2>
         <div class="gnb_wrap">
             <ul id="gnb_1dul">
-                
+
                 <?php
 				$menu_datas = get_menu_db(0, true);
 				$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
@@ -57,7 +57,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     $k = 0;
                     foreach( (array) $row['sub'] as $row2 ){
 
-                        if( empty($row2) ) continue; 
+                        if( empty($row2) ) continue;
 
                         if($k == 0)
                             echo '<span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">'.PHP_EOL;
@@ -79,16 +79,16 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
                 <?php } ?>
             </ul>
-            
-            
+
+
         </div>
     </nav>
-    
-        
-        
+
+
+
     </div>
-    
-    
+
+
 
 </div>
 <!-- } 상단 끝 -->
@@ -98,16 +98,28 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
-	
+
     <div id="container_wr">
-	
-	
-	
+
+
+
 	<!-- 메인페이지는 보이고 서브페이지는 안보이게 만듬 -->
 	<? if( defined("_INDEX_") ){ ?>
 
 
 		<link rel="stylesheet" href="<? echo G5_THEME_URL; ?>/css/jquery.bxslider.css">
+    <style>
+    .bx-wrapper {
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border: 0 none;
+      margin-bottom: 0
+    }
+    .bx-wrapper .bx-pager{
+      bottom:30px
+    }
+    </style>
 		<script>
 			$(document).ready(function(){
 				$(".slider").bxSlider();
@@ -118,14 +130,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 				<li><img src="<? echo G5_THEME_URL; ?>/img/pc01.jpg" alt=""></li>
 				<li><img src="<? echo G5_THEME_URL; ?>/img/pc02.jpg" alt=""></li>
 				<li><img src="<? echo G5_THEME_URL; ?>/img/pc03.jpg" alt=""></li>
-			</ul>		
-				
+			</ul>
+
 		</div>
 
 
 	<? } ?>
 
-    
-	
+
+
 	<div id="container">
         <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
