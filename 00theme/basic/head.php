@@ -96,14 +96,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 <hr>
 
-<!-- 콘텐츠 시작 { -->
-<div id="wrapper">
-
-    <div id="container_wr">
-
-
-
-	<!-- 메인페이지는 보이고 서브페이지는 안보이게 만듬 -->
+<!-- 메인페이지는 보이고 서브페이지는 안보이게 만듬 -->
 	<? if( defined("_INDEX_") ){ ?>
 
 
@@ -119,6 +112,12 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     .bx-wrapper .bx-pager{
       bottom:30px
     }
+
+	.slider li img{width: 100%;}
+	.slider .txt{width: 1200px;position: absolute;left:50%;transform:translateX(-50%);background: white;top:300px;text-align: center;}
+	.slider .txt h3{font-size: 2em;}
+
+	
     </style>
 		<script>
 			$(document).ready(function(){
@@ -127,7 +126,12 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 		</script>
 		<div>
 			<ul class="slider">
-				<li><img src="<? echo G5_THEME_URL; ?>/img/pc01.jpg" alt=""></li>
+				<li>
+					<img src="<? echo G5_THEME_URL; ?>/img/pc01.jpg" alt="">
+					<div class="txt">
+						<h3>Lorem ipsum dolor.	</h3>
+					</div>
+				</li>
 				<li><img src="<? echo G5_THEME_URL; ?>/img/pc02.jpg" alt=""></li>
 				<li><img src="<? echo G5_THEME_URL; ?>/img/pc03.jpg" alt=""></li>
 			</ul>
@@ -135,8 +139,26 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 		</div>
 
 
-	<? } ?>
+	<? }else{ ?>
 
+		<style>
+			.sub{height: 300px;background: pink;}
+		</style>
+
+	<div class="sub">
+		
+	</div>
+
+	<?}?>
+
+<!-- 콘텐츠 시작 { -->
+<div id="wrapper">
+
+    <div id="container_wr">
+
+
+
+	
 
 
 	<div id="container">
