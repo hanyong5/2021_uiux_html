@@ -3,6 +3,8 @@
 .nav h1{text-align: center;}
 .menu li{float: left;width:20%;_background: skyblue;position: relative;}
 .menu li:before{content:"";transition: 0.3s;left: 50%;transform:translateX(-50%)}
+
+.menu li.active:before,
 .menu li:hover:before{
     content:"";width: 8px;height: 8px;background: #000;
     display: block;position: absolute;left: 50%;transform:translateX(-50%);
@@ -14,4 +16,8 @@
 
 .visual{height: 200px;background: orange;}
 .visual.sub1{background: skyblue;}
+.visual.sub2{background: gray;}
+.visual.sub3{background: url(../../images/pc01.jpg) no-repeat center;background-size: cover;}
+.visual.sub4{background: gold;}
+.visual.sub5{background: url(../../images/pc03.jpg) no-repeat center;background-size: cover;}
 .visual h2{text-align: center;position: relative;top:35%}
