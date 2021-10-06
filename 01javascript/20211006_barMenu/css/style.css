@@ -1,0 +1,17 @@
+@charset "utf-8";
+.nav{width: 1000px;margin: 0 auto;}
+.nav h1{text-align: center;}
+.menu li{float: left;width:20%;_background: skyblue;position: relative;}
+.menu li:before{content:"";transition: 0.3s;left: 50%;transform:translateX(-50%)}
+.menu li:hover:before{
+    content:"";width: 8px;height: 8px;background: #000;
+    display: block;position: absolute;left: 50%;transform:translateX(-50%);
+    border-radius:4px;
+}
+.menu li a{display: block;text-align: center;line-height: 40px;}
+.bar{width: 200px;height: 5px;background: red;position: relative;left:calc( 200px * 0 );transition:0.3s}
+
+
+.visual{height: 200px;background: orange;}
+.visual.sub1{background: skyblue;}
+.visual h2{text-align: center;position: relative;top:35%}
