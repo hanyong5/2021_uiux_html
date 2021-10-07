@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .panel{
+            width: 600px;height: 300px;
+            border: 1px solid #000;
+            margin: 0 auto;position: relative;
+        }
+        .bar{
+            width: 500px;height: 20px;
+            background: #f00;
+            position: absolute;left: 50px;top: 190px;
+        }
+        .car{
+            position: absolute;left: 54px;top: 120px;
+        }
+        .car.rotate{
+            transform:rotateY(180deg)
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            const car = $(".car");
+            const bar = $(".bar");
+            //자동차 시작위치, 자동차 도착위치, 자동차 현재위치, 자동차 이동거리
+
+            const nStart = bar.position().left;
+            const nEnd = nStart + bar.width() - car.width();
+            let current = nStart;
+            let nStep = 2;
+
+            setInterval(carMove,30)
+            
+            function carMove(){
+                current = current + nStep; //current += nStep;
+                // console.log(current);
+
+                if( current > nEnd){
+                    nStep = -2;
+                    car.addClass("rotate")
+                }
+                if( current < nStart){
+                    nStep = 2;
+                    car.removeClass("rotate")
+                }
+                car.css("left",current)
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="panel">
+        <div class="bar"></div>
+        <div class="car"><img src="../images/car.png" alt=""></div>
+    </div>
+    <button class="btn_start">시작</button>
+    <button class="btn_stop">멈춤</button>
+</body>
+</html>
