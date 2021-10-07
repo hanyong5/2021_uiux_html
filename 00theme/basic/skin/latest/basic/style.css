@@ -22,5 +22,18 @@
 	flex-direction:column;
 	justify-content:space-between;
 }
-.content .subject{font-weight: bold;}
+.content .subject{font-weight: bold;height: 50px;}
 .content .etc{font-size: 1em;}
+.content .img{
+	height:90px;background: skyblue;overflow: hidden;
+	position: relative;border-radius:10px
+}
+.content .img img{
+	position: absolute;left:50%;top:50%;
+	transform:translate(-50%,-50%);
+	transition:0.3s
+}
+.content:hover .img img{
+	left:50%;top:50%;
+	transform:translate(-50%,-50%) scale(1.1)
+}
