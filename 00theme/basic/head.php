@@ -142,11 +142,29 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 	<? }else{ ?>
 
 		<style>
-			.sub{height: 300px;background: pink;}
+			.subVisual{height: 300px;background: pink;}
+			.sbtImg{
+				height: 300px;background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display:flex;align-items:center;justify-content:center
+				}
+			.sbtImg .title{text-align: center;}
+			.sbtImg .title h2{font-size: 2.5em;transform:translateY(-20px);color:#000;text-shadow:0 0 10px #fff}
+			.sbtImg .title .txt{font-size: 1.5em;color:white}
+			.sbtImg.subTopBg_01{background-image: url(<? echo G5_THEME_URL; ?>/img/pc01.jpg);}
+			.sbtImg.subTopBg_06{background-image: url(<? echo G5_THEME_URL; ?>/img/pc03.jpg);}
+
+			
 		</style>
 
-	<div class="sub">
-		
+	<div class="subVisual">
+		<div id="page_title" class="sbtImg">
+			<div class="title">
+				<h2 class="loc1D"></h2>
+				<div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, numquam!</div>
+			</div>
+		</div>
 	</div>
 
 	<?}?>
@@ -164,7 +182,12 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 
 	<div id="container">
-        <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }?>
+        <?php if (!defined("_INDEX_")) { ?>
+			<h2 id="container_title" style="text-align:center">
+				<span title="<?php echo get_text($g5['title']); ?>">
+				<?php echo get_head_title($g5['title']); ?></span>
+			</h2>
+		<?php }?>
 
 
 

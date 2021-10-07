@@ -2,24 +2,27 @@
 
 <style TYPE="text/css">
 <!--
-#snb{width:100%;}
+	#mysubmenu{
+		position: absolute;top:-71px;left: 50%;
+		transform:translateX(-50%);background: white;
+		}
 	#snb {width:100%;}
 	#snb > li.snb{width:100%;display:none;}
 	#snb > li.snb.active{display:block !important;}
-	#snb > li > h2{width:100%;background:#000;}
-	#snb > li > h2 a{display:block;background:#000; text-align:center; padding:80px 10px; color:#fff;}
-	#snb > li > h2 a b{display:block;font-size:18px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-	#snb > li > h2 a sub{display:block;padding-top:10px;font-family:vardana;font-size:12px;letter-spacing:0.05em;font-weight:normal;filter:Alpha(opacity=50); opacity:0.5; -moz-opacity:0.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+	#snb > li > h2{width:100%;display: none;}
+
 	#snb > li .snb2dDown{display:none;}
 
-	#snb > li > ul{}
-	#snb > li > ul > li{border-bottom: 1px solid #ddd;}
-	#snb > li > ul > li a{display:block;padding:15px;color:#666;-webkit-transition-duration: 0.2s;-webkit-transition-timing-function: ease;transition-duration: 0.2s;transition-timing-function: ease;}
-	#snb > li > ul > li a b{font-size:13px;}
-	#snb > li > ul > li a:hover{background:#f3f3f3;padding-left:20px;color:#000;-webkit-transition-duration: 0.2s;-webkit-transition-timing-function: ease;transition-duration: 0.2s;transition-timing-function: ease;}
-	#snb > li > ul > li.snb2d.active a{background:#ddd;color:#000;}
+	#snb > li > ul > li a{display:block;padding:15px 30px;color:#666;-webkit-transition-duration: 0.2s;-webkit-transition-timing-function: ease;transition-duration: 0.2s;transition-timing-function: ease;}
+	#snb > li > ul > li a b{font-size:16px;}
+	
+	#snb > li > ul > li.snb2d.active a{background:skyblue;color:#000;}
 	#snb > li > ul > li a{overflow:hidden;}
 	#snb > li > ul > li a i{float:right;}
+
+	.snb ul.snb2dul li{float:left}
+	.snb2d b i{display: none;}
+
 
 //-->
 </style>
