@@ -35,8 +35,9 @@
             const nEnd = nStart + bar.width() - car.width();
             let current = nStart;
             let nStep = 2;
+            let nTimerId = 0;
 
-            setInterval(carMove,30)
+            
             
             function carMove(){
                 current = current + nStep; //current += nStep;
@@ -52,6 +53,22 @@
                 }
                 car.css("left",current)
             }
+
+            nTimerId = setInterval(carMove,30);
+            
+            $(".btn_start").click(function(){
+                if(nTimerId == 0){
+                    nTimerId = setInterval(carMove,30);
+                }
+                console.log(nTimerId)
+            });
+            $(".btn_stop").click(function(){
+                clearInterval(nTimerId);
+                nTimerId = 0;
+            })
+            
+            
+
         })
     </script>
 </head>
