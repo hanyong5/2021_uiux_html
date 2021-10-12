@@ -43,9 +43,6 @@
 
             $(".menuPos").html(`${parseInt(menuPos)}px`)
 
-            
-
-
             let scrollY = $(window).scrollTop();
             $(".scrollY").html(`${parseInt(scrollY)}px`)
 
@@ -59,7 +56,7 @@
                 //    .nav addClass("fixed")
                 //}
 
-                if(menuPos < scrollY){
+                if(scrollY > menuPos ){
                     $(".nav").addClass("fixed");
                 }else{
                     $(".nav").removeClass("fixed")
