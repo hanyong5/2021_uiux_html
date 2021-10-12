@@ -13,7 +13,83 @@
             right: 100px;top: 100px;
             background: skyblue;
         }
+        .nav{background: pink;}
+        .nav.fixed{position: fixed;top:0;width: 100%;background: orange;}
+        .nav li{
+            float: left;
+            width: 20%;text-align: center;line-height: 40px;
+            cursor:pointer
+        }
+        .nav li:hover{background: darkblue;color:white}
+        .car1{position: relative;left: 0;transition:0.3s;opacity: 0;}
+        .car1.move1{left:300px;opacity: 1;}
+        .car2{position: absolute;right: 0;transition:0.3s;opacity: 0;}
+        .car2.move2{right:300px;opacity: 1;}
+
+        .top{
+            width: 100px;height: 100px;background: #000;color:white;
+            position: fixed;bottom: 30px;right: 30px;
+            border-radius: 50px;
+            cursor:pointer;display: none;
+            line-height: 100px;text-align: center;
+
+        }
+        .top a{color: #fff;}
     </style>
+
+    <script>
+        $(document).ready(function(){
+            const menuPos = $(".nav").offset().top;
+
+            $(".menuPos").html(`${parseInt(menuPos)}px`)
+
+            
+
+
+            let scrollY = $(window).scrollTop();
+            $(".scrollY").html(`${parseInt(scrollY)}px`)
+
+            $(window).scroll(function(){
+                //console.log(window.pageYOffset) //javascript scroll value
+                //console.log($(window).scrollTop()) // jquery  scroll value
+                scrollY = $(window).scrollTop();
+                $(".scrollY").html(`${parseInt(scrollY)}px`);
+
+                //if(메뉴(menupos)위치와 스크롤위치가 같다면){
+                //    .nav addClass("fixed")
+                //}
+
+                if(menuPos < scrollY){
+                    $(".nav").addClass("fixed");
+                }else{
+                    $(".nav").removeClass("fixed")
+                }
+
+                if( scrollY > $(".car1").offset().top - 800 ){
+                    $(".car1").addClass("move1")
+                }else{
+                    $(".car1").removeClass("move1")
+                }
+
+                if( scrollY > $(".car2").offset().top - 800 ){
+                    $(".car2").addClass("move2")
+                }else{
+                    $(".car2").removeClass("move2")
+                }
+
+                if(scrollY > $("body").height() / 2){
+                    $(".top").fadeIn()
+                }else{
+                    $(".top").fadeOut()
+                }
+
+            }) // scroll event
+
+            $(".top").click(function(){
+                $("html,body").animate({scrollTop:0},1000)
+            })
+        }); // ready event
+    </script>
 </head>
 <body>
     <div class="box1">
@@ -69,7 +145,7 @@
         <p>46</p>
         <p>47</p>
         <p>48</p>
-        <p>49</p>
+        <p  id="top">49</p>
         <div class="nav">
             <ul class="clearfix">
                 <li>menu1</li>
@@ -90,9 +166,11 @@
         <p>58</p>
         <p>59</p>
         <p>60</p>
+        <img src="../images/car.png" alt="" class="car1">
         <p>61</p>
         <p>62</p>
         <p>63</p>
+        <img src="../images/car.png" alt="" class="car2">
         <p>64</p>
         <p>65</p>
         <p>66</p>
@@ -130,6 +208,9 @@
         <p>98</p>
         <p>99</p>
         <p>100</p>
+        <div class="top">
+            top
+        </div>
     </div>
 </body>
 </html>
