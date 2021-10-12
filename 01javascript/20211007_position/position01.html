@@ -29,10 +29,33 @@
 
             
             
-            const bWidth = $("body").width();
-            if(bWidth < 1000){
-                $("body").css("background-color","red")
+            let bWidth = $("body").width();
+            console.log(bWidth)
+
+            function wView(){
+                if(bWidth < 1000){
+                    $("body").css("background-color","red")
+                }else{
+                    $("body").css("background-color","initial")
+                }
             }
+
+            wView(); // 문서시작시 시작
+
+
+
+            $(window).resize(function(){
+                bWidth = $("body").width();
+                console.log(bWidth);
+                wView() // 리사이즈시 시작
+                
+            });  
+
+
+
+            //window.onresize =function(){}
+            //window.addEventListener("resize",function(){})
+
 
 
 
