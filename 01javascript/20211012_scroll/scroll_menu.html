@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll menu</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+    <style>
+        .menu{background: #ccc;}
+        .menu.fixed{position: fixed;background: skyblue;width: 100%;}
+        .menu.fixed a{line-height:40px;}
+        .menu ul{width: 1000px;margin: 0 auto;}
+        .menu li{float: left;width: 20%;}
+        .menu li a{display: block;text-align: center;line-height: 60px;transition:0.3s}
+
+        .content{height: 3000px;}
+    </style>
+    <script>
+        //$(document).ready(function(){});
+        $(function(){
+            $(document).mousewheel(function(event,delta){
+
+                console.log(delta) // scroll 위  +1 
+
+                $(window).scroll(function(){
+                    let scrollY = $(window).scrollTop();  // window.pageYOffset
+                    console.log(scrollY)
+                    if(scrollY > 200){
+                        //$(".menu").addClass("fixed")
+
+                        if(delta > 0){
+                            $(".menu").addClass("fixed")
+                        }else{
+                            $(".menu").removeClass("fixed")
+                        }
+
+
+
+                    }else{
+                        $(".menu").removeClass("fixed")
+                    }
+                })
+
+
+            });
+
+            
+
+            
+        });
+
+        
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="menu">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsum quod nam delectus aperiam vitae a, natus sequi distinctio excepturi animi earum quo, corrupti cupiditate corporis odit suscipit hic. Beatae maiores, voluptates ullam ut distinctio atque. Deleniti facere corrupti fuga accusamus veritatis quaerat nulla sint quia! Tempore consequuntur pariatur soluta impedit reiciendis. Nostrum tempora similique soluta perferendis, quas ullam odio pariatur doloribus quia. Suscipit maiores architecto quia necessitatibus ad soluta omnis odit iste minus dolore non cumque numquam officiis optio magni animi, aliquam ipsa quam assumenda dolorem inventore libero repellat saepe! Eos distinctio perferendis doloribus nostrum consequuntur odio nesciunt quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsum quod nam delectus aperiam vitae a, natus sequi distinctio excepturi animi earum quo, corrupti cupiditate corporis odit suscipit hic. Beatae maiores, voluptates ullam ut distinctio atque. Deleniti facere corrupti fuga accusamus veritatis quaerat nulla sint quia! Tempore consequuntur pariatur soluta impedit reiciendis. Nostrum tempora similique soluta perferendis, quas ullam odio pariatur doloribus quia. Suscipit maiores architecto quia necessitatibus ad soluta omnis odit iste minus dolore non cumque numquam officiis optio magni animi, aliquam ipsa quam assumenda dolorem inventore libero repellat saepe! Eos distinctio perferendis doloribus nostrum consequuntur odio nesciunt quaerat.
+        </div>
+    </div>
+</body>
+</html>
