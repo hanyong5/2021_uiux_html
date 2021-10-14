@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .wrapper{width: 500px;height: 200px;margin: 0 auto;background: skyblue;overflow: hidden;}
+        .wrapper img{width: 100%;}
+        .wrapper ul{width: 500px;height: 200px;position: relative;}
+        .wrapper li{position: absolute;left: 100%;width: 100%;}
+        .wrapper li:first-child{left: 0;}
+    </style>
+    <script>
+        $(function(){
+            // $(".wrapper li").eq(0).animate({"left":"-100%"},1000);
+            // $(".wrapper li").eq(1).animate({"left":0},1000);
+
+            // $(".wrapper li").eq(0).css("left","-100%");
+            // $(".wrapper li").eq(1).css("left",0);
+
+
+
+            //setInterval(function(){console.log("슬라이더")},3000)
+            setInterval(slider,3000);
+            
+            let current=0;
+            function slider(){
+                
+                //$(".wrapper li").eq(current).stop().animate({"left":"-100%"},1000);
+                //$(".wrapper li").eq(current).css("left",0).stop().animate({"left":"-100%"},1000);
+
+               
+                $(".wrapper li").eq(current).css("left",0).stop().animate({"left":"-100%"})
+
+                current++;
+                if(current == 5){current=0}
+                
+                $(".wrapper li").eq(current).css("left","100%").stop().animate({"left":0})
+                
+                //$(".wrapper li").eq(current).stop().animate({"left":0},1000);
+                //$(".wrapper li").eq(current).css("left","100%").stop().animate({"left":0},1000);
+            }
+        });
+    </script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="../images/images01.jpg" alt="img01"></li>
+            <li><img src="../images/images02.jpg" alt="img02"></li>
+            <li><img src="../images/images03.jpg" alt="img03"></li>
+            <li><img src="../images/images04.jpg" alt="img04"></li>
+            <li><img src="../images/images05.jpg" alt="img05"></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <title>bootstrap</title>
+
+    <style type="text/css">
+
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+            .navbar .nav-item .dropdown-menu{ display: none; }
+            .navbar .nav-item:hover .nav-link{   }
+            .navbar .nav-item:hover .dropdown-menu{ display: block; }
+            .navbar .nav-item .dropdown-menu{ margin-top:0; }
+        }	
+        /* ============ desktop view .end// ============ */
+        
+        </style>
   </head>
   <body>
 
@@ -111,6 +124,8 @@
             </nav>
         </div>
     </div>
+
+    
 
 
    
