@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        html,body{height: 100%;}
+
+        .menu{
+            position: fixed;
+            background: skyblue;width: 100%;
+            padding-left: 30px;
+        }
+
+        .menu>h1,.menu>a{float: left;}
+        .menu>h1{margin-right: 30px;line-height: 40px;}
+        .menu>a{display: block;line-height: 40px;padding: 0 20px;transition:0.3s}
+        .menu>a.on{background: orange;}
+
+        .scene{
+            width: 100%;height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;justify-content: center;align-items: center;
+        }
+        .scene.one{background-image: url(../images/pc01.jpg);}
+        .scene.two{background-image: url(../images/pc02.jpg);}
+        .scene.three{background-image: url(../images/pc03.jpg);}
+
+        .scene div.txt{
+            width: 50%;
+        }
+        .scene div.txt h2{
+            font-size: 6vh;
+        }
+        .scene div.txt h2:after{
+            content:"";display: block;width: 100%;height: 3px;background: #fff;
+            margin: 10px 0;border-radius: 2px;
+        }
+    </style>
+    <script>
+        $(function(){
+            // 1st
+            // const oneTop = $(".one").offset().top;
+            // const twoTop = $(".two").offset().top;
+            // const threeTop = $(".three").offset().top;
+
+            // $(".menu>a").eq(0).click(function(e){
+            //     e.preventDefault();
+            //     $("html,body").animate({scrollTop:oneTop},300)
+            // });
+            // $(".menu>a").eq(1).click(function(e){
+            //     e.preventDefault();
+            //     $("html,body").animate({scrollTop:twoTop},300)
+            // });
+            // $(".menu>a").eq(2).click(function(e){
+            //     e.preventDefault();
+            //     $("html,body").animate({scrollTop:threeTop},300)
+            // });
+
+            //2st
+            // $(".menu>a").click(function(e){
+            //     e.preventDefault();
+            //     let i = $(this).index();
+            //     console.log(i)
+            //     let st = $(".scene").eq(i-1).offset().top;
+            //     $("html,body").animate({scrollTop:st},300)
+            // })
+
+            //3st
+            $(".menu>a").click(function(e){
+                e.preventDefault();
+                let target = $(this.hash);
+                let st = target.offset().top;
+
+                // $(".menu>a").removeClass();
+                // $(this).addClass("on");
+
+                console.log(st)
+                $("html,body").animate({scrollTop:st},300)
+
+            });
+
+            $(window).scroll(function(){
+                let scrollY =  $(window).scrollTop();
+
+                //1st
+                // if(scrollY >= $(".scene").eq(0).offset().top){
+                //     $(".menu>a").removeClass().eq(0).addClass("on");
+                // }
+                // if(scrollY >= $(".scene").eq(1).offset().top){
+                //     $(".menu>a").removeClass().eq(1).addClass("on");
+                // }
+                // if(scrollY >= $(".scene").eq(2).offset().top){
+                //     $(".menu>a").removeClass().eq(2).addClass("on");
+                // }
+
+                //2st for
+                // for(let i=0;i < $(".scene").length;i++ ){
+                //     if(scrollY >= $(".scene").eq(i).offset().top){
+                //         $(".menu>a").removeClass().eq(i).addClass("on");
+                //     }
+                // }
+
+                //3st $(selector).each()
+                
+                $(".scene").each(function(index){
+                    if(scrollY >= $(this).offset().top){
+                        $(".menu>a").removeClass().eq(index).addClass("on")
+                    }
+                });
+
+
+
+
+
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <nav class="menu clearfix">
+        <h1><a href="#">LOGO</a></h1>
+        <a href="#v01" class="on">MENU01</a>
+        <a href="#v02">MENU02</a>
+        <a href="#v03">MENU03</a>
+    </nav>
+    <section class="scene one" id="v01">
+        <div class="txt">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente illo cupiditate id nihil quo autem dolorum culpa enim debitis et.</p>
+        </div>
+    </section>
+    <section class="scene two"  id="v02">
+        <div class="txt">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente illo cupiditate id nihil quo autem dolorum culpa enim debitis et.</p>
+        </div>
+    </section>
+    <section class="scene three"  id="v03">
+        <div class="txt">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente illo cupiditate id nihil quo autem dolorum culpa enim debitis et.</p>
+        </div>
+    </section>
+</body>
+</html>
