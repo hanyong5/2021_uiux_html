@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{height: 400vh;}
+        .sample-video{width: 100%;position: fixed;}
+        .state{
+            position: fixed;background: skyblue;
+            width: 100%;height: 10px;
+        }
+        .state .bar{width: 0;height: 10px;background: red;}
+    </style>
+</head>
+<body>
+    <!-- <video src="video/o_big_intro.mp4" class="sample-video" muted></video> -->
+    <video src="video/o_small_intro.mp4" class="sample-video" muted></video>
+    <div class="state">
+        <div class="bar"></div>
+    </div>
+    <script>
+        const videoElem = document.querySelector(".sample-video");
+        const bar = document.querySelector(".bar");
+
+        window.addEventListener("scroll",function(){
+            let scrollY = window.pageYOffset;
+            const bHeight = document.body.offsetHeight;
+            let wHeight = window.innerHeight;
+            let sHeight = bHeight - wHeight;
+
+            let progress = scrollY / sHeight;
+
+
+            console.log(progress)
+            //videoElem.style.opacity = progress;
+            bar.style.width = progress * 100 + "%";
+
+            videoElem.currentTime = videoElem.duration * progress;   // 12.87 * 
+            
+        })
+    </script>
+</body>
+</html>
