@@ -35,19 +35,51 @@
                 if(current == 5 ){current=0}
                 $(".wrapper li").eq(current).css({"left":"100%"}).stop().animate({"left":0},400,function(){overBtn=false})
 
+                console.log(current)
             }
 
 
         }
 
+        function prevSlider(){
+            if(overBtn == false){
+                overBtn = true;
+                //0 -> 100%
+                $(".wrapper li").eq(current).css({"left":0}).stop().animate({"left":"100%"},400)
+                
+                current--; // current = current - 1;
+                if( current == -1){current = 4}
+
+                //4 -100% -> 0
+                $(".wrapper li")
+                    .eq(current)
+                    .css({"left":"-100%"})
+                    .stop()
+                    .animate({"left":0},400,function(){overBtn=false})
+
+                console.log(current)
+            }
+
+
+
+        }
+
+
+
         $(".next").click(function(){
             nextSlider()
+        });
+        
+        $(".prev").click(function(){
+            prevSlider();
         });
 
         setInterval(function(){
             $(".next").trigger("click")
         },3000)
         
+        
+
        })
     </script>
 </head>
