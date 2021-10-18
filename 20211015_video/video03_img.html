@@ -7,10 +7,10 @@
     <title>video</title>
     <link rel="stylesheet" href="../css/reset.css">
     <style>
-        body{height: 400vh;}
+        body{height: 400vh;background: #000;}
         .sample-img{
-            width: 100%;position: fixed;
-            top:0;left:0
+            left:50%;top:50%;position: fixed;
+            transform:translate3d(-50%,-50%,0);
         }
         .view{
             position: relative;width: 100%;text-align: center;
@@ -32,7 +32,9 @@
         const sImg = document.querySelector(".sample-img");
         const videoImg = [];
         let totalImg = 122;
-        let currentFrame
+        let currentFrame;
+        let progress;
+        let hRatio; 
 
         for(let i=0;i<totalImg;i++){
             let imgElem = "images/small/o_intro_small_"+ ( 1000 + i ) +".jpg";
@@ -41,14 +43,28 @@
 
         window.addEventListener("scroll",function(){
             
-            let progress = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+            progress = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
             
+            view();
             
+        })
+
+        window.addEventListener("resize",function(){
+            hRatio = window.innerHeight / 1080;
+
+            view()
+            
+        })
+
+        function view(){
             currentFrame = Math.round(( totalImg - 1 ) * progress);
             console.log(currentFrame)
             sImg.src = videoImg[currentFrame];
-        })
 
+
+            sImg.style.transform = `translate3d(-50%,-50%,0) scale(${hRatio})`
+
+        }
 
 
     </script>

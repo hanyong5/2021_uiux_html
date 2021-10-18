@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        img{width: 500px;}
+        .wrapper{width: 500px;margin: 0 auto;height: 200px;background: skyblue;}
+        .wrapper ul{width: 500px;height: 200px;position: relative;overflow: hidden;}
+        .wrapper li{position: absolute;left: 100%;}
+        .wrapper li:first-child{left: 0;}
+
+    </style>
+
+    <script>
+        $(function(){
+
+            // $(".wrapper li").eq(0).css({"left":0}).animate({"left":"-100%"},1000);
+            // $(".wrapper li").eq(1).css({"left":"100%"}).animate({"left":0},1000);
+
+            let current = 0;
+            setInterval(slider,5000)
+
+            function slider(){
+                //$(".wrapper li").eq(current).css({"left":0}).animate({"left":"-100%"},1000);
+                move(current,0,"-100%")
+
+                current++;
+                if(current == 5){current=0}
+
+
+                //$(".wrapper li").eq(current).css({"left":"100%"}).animate({"left":0},1000);
+                move(current,"100%",0)
+            }
+
+            function move(i,start,end){
+                $(".wrapper li").eq(i).css("left",start).animate({"left":end},1000)
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="../images/images01.jpg" alt="img1"></li>
+            <li><img src="../images/images02.jpg" alt="img2"></li>
+            <li><img src="../images/images03.jpg" alt="img3"></li>
+            <li><img src="../images/images04.jpg" alt="img4"></li>
+            <li><img src="../images/images05.jpg" alt="img5"></li>
+        </ul>
+    </div>
+</body>
+</html>

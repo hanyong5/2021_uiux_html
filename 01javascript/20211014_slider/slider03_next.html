@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        img{width: 500px;}
+        .wrapper{width: 500px;margin: 0 auto;height: 230px;background: skyblue;}
+        .wrapper ul{width: 500px;height: 200px;position: relative;overflow: hidden;}
+        .wrapper li{position: absolute;left:100%;}
+        .wrapper li:first-child{left: 0;}
+
+    </style>
+        //1 next버튼 실행, 2. 함수를 만들어서 슬라이드 작동  
+        //3. 트리거사용하여 넥스트버튼실행 (setinterval) 4. next이중클릭 overBtn=false
+        //5. 이전버튼 생성
+
+
+    <script>
+       $(function(){
+        let current = 0;
+        let overBtn = false;
+
+
+        function nextSlider(){
+
+            if( overBtn == false){
+                overBtn = true;
+                $(".wrapper li").eq(current).css({"left":0}).stop().animate({"left":"-100%"},400)
+                current++;
+                if(current == 5 ){current=0}
+                $(".wrapper li").eq(current).css({"left":"100%"}).stop().animate({"left":0},400,function(){overBtn=false})
+
+            }
+
+
+        }
+
+        $(".next").click(function(){
+            nextSlider()
+        });
+
+        setInterval(function(){
+            $(".next").trigger("click")
+        },3000)
+        
+       })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="../images/images01.jpg" alt="img1"></li>
+            <li><img src="../images/images02.jpg" alt="img2"></li>
+            <li><img src="../images/images03.jpg" alt="img3"></li>
+            <li><img src="../images/images04.jpg" alt="img4"></li>
+            <li><img src="../images/images05.jpg" alt="img5"></li>
+        </ul>
+        <div class="btn">
+            <a href="#" class="prev">이전</a> | <a href="#" class="next">다음</a>
+        </div>
+    </div>
+</body>
+</html>
