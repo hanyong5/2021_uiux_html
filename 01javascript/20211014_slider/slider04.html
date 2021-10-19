@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        img{width: 500px;}
+        .wrapper{width: 500px;margin: 0 auto;height: 250px;background: skyblue;}
+        .wrapper ul{width: 500px;height: 200px;position: relative;overflow: hidden;}
+        .wrapper li{position: absolute;left:100%;}
+        .wrapper li:first-child{left: 0;}
+
+        .wrapper .pager span{
+            width: 15px;height: 15px;display: inline-block;
+            border-radius: 8px;background: orange;
+            text-indent: -9999px;cursor:pointer
+        }
+
+        .wrapper .pager span:hover{background: #f00;}
+        .wrapper .pager span.active{background: #fff;}
+
+    </style>
+    <script>
+       $(function(){
+           let current = 0;
+           const banner = $(".wrapper li");
+           const banCount = banner.length;
+           let i;
+           let overBtn = false;
+
+            $(".next").click(function(){
+                if(overBtn == false){
+                    overBtn = true;
+                    i = current + 1;
+                    //if(i==5){i=0}
+                    if(i == banCount ){
+                        i = 0;
+                        current = banCount - 1;
+                    }
+                    slider("next");
+                }
+            });
+
+            $(".prev").click(function(){
+                if(overBtn == false){
+                    overBtn = true;
+                    i = current - 1;
+                    if(i == -1){
+                        i = banCount -1;
+                        current = 0;
+                    }
+                    slider("prev");
+                }
+            })
+
+            function slider(view){
+                let currentEl = banner.eq(current);
+                let nextEl = banner.eq(i)
+
+                $(".pager span").removeClass("active").eq(i).addClass("active");
+                if(view == "next"){
+                    currentEl.css("left",0).stop().animate({left:"-100%"},300);
+                    nextEl.css({left:"100%"}).stop().animate({left:0},300,function(){overBtn=false});
+                }else{
+                    currentEl.css("left",0).stop().animate({left:"100%"},300);
+                    nextEl.css({left:"-100%"}).stop().animate({left:0},300,function(){overBtn=false});
+                }
+                current = i;
+            }
+
+            $(".pager span").click(function(){
+                i = $(this).index()
+                slider("next")
+            })
+
+
+
+       });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="../images/images01.jpg" alt="img1"></li>
+            <li><img src="../images/images02.jpg" alt="img2"></li>
+            <li><img src="../images/images03.jpg" alt="img3"></li>
+            <li><img src="../images/images04.jpg" alt="img4"></li>
+            <li><img src="../images/images05.jpg" alt="img5"></li>
+        </ul>
+        <div class="btn">
+            <a href="#" class="prev">이전</a> | <a href="#" class="next">다음</a>
+        </div>
+        <div class="pager">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
+    </div>
+</body>
+</html>
