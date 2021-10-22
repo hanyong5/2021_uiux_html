@@ -16,17 +16,24 @@
             position: absolute;
             width: 100%;height: 100%;left: 0;top: 0;
             transform-style: preserve-3d;
-            transform:rotateX(329deg) rotateY(40deg) translateZ(150px)
+            transform:rotateX(328deg) rotateY(30deg) translateZ(150px);
+            transition:0.3s
             
         }
+        .box:hover .cube{ transform:rotateX(30deg) rotateY(30deg) translateZ(150px)}
         .face{
             width: 100%;height: 100%;
             position: absolute;
+            display: flex;justify-content: center;
+            align-items: center;font-size: 3em;
         }
         .face-front,.face-back{background: skyblue;}
+        .face-left,.face-right{background: green;}
+        .face-top,.face-bottom{background: orange;}
 
-        .face-back{transform:translate3d(0,0,-300px)}
-        .face-bottom{background: orange;}
+        .face-back{transform:translate3d(0,0,-300px) rotateY(180deg)}
+        .face-left{transform:rotateY(-90deg) translate3d(-150px,0,150px) }
+        .face-right{transform:rotateY(90deg) translate3d(150px,0,150px)}
     </style>
 </head>
 <body>
@@ -34,9 +41,9 @@
         <div class="cube">
             <div class="face face-front">front</div>
             <div class="face face-back">back</div>
-            <!-- <div class="face face-left">left</div>
+             <div class="face face-left">left</div>
             <div class="face face-right">right</div>
-            <div class="face face-top">top</div>
+            <!--<div class="face face-top">top</div>
             <div class="face face-bottom">bottom</div> -->
         </div>
     </div>
