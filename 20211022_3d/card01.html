@@ -105,11 +105,19 @@
         //     this.classList.toggle("back")
         // })
 
-        for(let i=0;i<card.length;i++){
-            card[i].addEventListener("click",function(){
+        // for(let i=0;i<card.length;i++){
+        //     card[i].addEventListener("click",function(){
+        //         this.classList.toggle("back")
+        //     })
+        // }
+
+        card.forEach(function(item,index){
+            card[index].addEventListener("click",function(){
                 this.classList.toggle("back")
             })
-        }
+        })
+
+
 
 
     </script>
