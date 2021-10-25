@@ -111,13 +111,28 @@
         //     })
         // }
 
-        card.forEach(function(item,index){
-            card[index].addEventListener("click",function(){
-                this.classList.toggle("back")
-            })
+        // card.forEach(function(item,index){
+        //     card[index].addEventListener("click",function(){
+        //         this.classList.toggle("back")
+        //     })
+        // })
+
+
+        // card[0].addEventListener("mouseover",function(){
+        //     this.classList.add("back");
+        // });
+        // card[0].addEventListener("mouseout",function(){
+        //     this.classList.remove("back");
+        // });
+
+        card.forEach(function(item,i){
+            card[i].addEventListener("mouseover",function(){
+            this.classList.add("back");
+            });
+            card[i].addEventListener("mouseout",function(){
+                this.classList.remove("back");
+            });
         })
-
-
 
 
     </script>
