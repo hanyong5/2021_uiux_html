@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // const object = {key:value}
+        // const array = [value,value]
+        //const object = {'name':'john','age':30}
+        // const obj = {
+        //     em:["john","anna","peter"],
+        //     ye:[30,50,60]
+        // }
+        const obj = {
+            em:[
+                {firstname:"john",lastname:"doe"},
+                {firstname:"anna",lastname:"jones"},
+                {firstname:"peter",lastname:"smith"}
+            ]
+        }
+
+        const img = [
+            "images/v1.jpg",
+            "images/v1.jpg",
+            "images/v1.jpg",
+            "images/v1.jpg",
+            "images/v1.jpg"
+        ]
+
+        for (let i=0;i< obj.em.length;i++){
+            console.log(obj.em[i]["lastname"]+", "+obj.em[i]["firstname"])
+            console.log(obj.em[i].lastname+", "+obj.em[i].firstname)
+        }
+
+
+    </script>
+</body>
+</html>
