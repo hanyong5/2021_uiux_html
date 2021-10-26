@@ -41,8 +41,24 @@
 
         .section .view03{transform:translateY(-200px)}
 
+
+        .scrollBtn{
+            position: absolute;bottom: 30px;left:50%;transform:translateX(-50%);
+            animation: xScroll 0.8s infinite alternate;
+        }
+        @keyframes xScroll {
+            to{bottom: 50px;}
+        }
+
         @media screen and (max-width:765px){
             .section .view03{transform:translateY(0px)}
+            .scrollBtn{_display: none;}
+        }
+
+        #myVideo{
+            position: absolute;
+            left: 0;top: 0;width: 100%;height: 100%;
+            object-fit: cover;
         }
     </style>
     <script>
@@ -75,7 +91,7 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">LOGO</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -103,13 +119,22 @@
     
     <div id="fullpage">
         <div class="section page1" data-anchor="m1st">
+            <video  id="myVideo" data-autoplay muted loop>
+                <source src="../images/sample01.mp4">
+            </video>
             <div class="container bg-info view01">
                 test1
+            </div>
+            <div class="scrollBtn">
+                <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
             </div>
         </div>
         <div class="section page2" data-anchor="m2st">
             <div class="container bg-primary view02">
                 test2
+            </div>
+            <div class="scrollBtn">
+                <a href="#m1st"><img src="images/btn_scroll.png" alt=""></a>
             </div>
         </div>
         <div class="section page3" data-anchor="m3st">
