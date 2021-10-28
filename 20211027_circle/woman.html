@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: #aaa;}
+        .man{
+            position: absolute;left:200px;
+            animation:bounce 0.7s infinite alternate;
+            background: #000;
+        }
+        .man div{position: absolute;}
+        .man div.body{z-index: 2;}
+        .man div.arm1{
+            top:110px;left:-20px;z-index: 4;
+            transform-origin: 80px 21px;transform: rotate(20deg);
+            animation:armR 0.7s linear infinite alternate;
+        }
+
+        .man div.arm2{
+            top:110px;left:-20px;
+            transform-origin: 80px 21px;transform: rotate(-60deg);
+            animation:armL 0.7s linear infinite alternate;
+        }
+
+        .man div.foot1{
+            top:200px;left:-10px;z-index: 3;
+            transform-origin: 40px 46px;transform: rotate(-10deg);
+            animation:footR 0.7s linear infinite alternate;
+        }
+        .man div.foot2{
+            top:200px;left:-10px;
+            transform-origin: 40px 46px;transform: rotate(20deg);
+            animation:footL 0.7s linear infinite alternate;
+        }
+
+
+
+        @keyframes bounce {
+            50%{transform:translateY(10px) translateX(5px) scale(1.1) rotateY(180deg)}
+            
+        }
+        @keyframes armR {
+            100%{transform:rotate(-60deg)}
+        }
+        @keyframes armL {
+            100%{transform:rotate(20deg)}
+        }
+
+        @keyframes footR {
+            100%{transform:rotate(20deg)}
+        }
+        @keyframes footL {
+            100%{transform:rotate(-10deg)}
+        }
+    </style>
+</head>
+<body>
+    <div class="man">
+        <div class="body"><img src="../images/body01.png" alt=""></div>
+        <div class="arm1"><img src="../images/arm01.png" alt=""></div>
+        <div class="arm2"><img src="../images/arm01.png" alt=""></div>
+        <div class="foot1"><img src="../images/foot01.png" alt=""></div>
+        <div class="foot2"><img src="../images/foot01.png" alt=""></div>
+    </div>
+    <div class="man" style="left: 500px;transform:rotateY(180deg)">
+        <div class="body"><img src="../images/body01.png" alt=""></div>
+        <div class="arm1"><img src="../images/arm01.png" alt=""></div>
+        <div class="arm2"><img src="../images/arm01.png" alt=""></div>
+        <div class="foot1"><img src="../images/foot01.png" alt=""></div>
+        <div class="foot2"><img src="../images/foot01.png" alt=""></div>
+    </div>
+</body>
+</html>
