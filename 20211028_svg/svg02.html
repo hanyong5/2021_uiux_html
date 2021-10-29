@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+    <style>
+        .box{width: 200px;}
+        .svg1{width: 100%;}
+        .box2{
+            width: 100vw;height: 100vh;
+            background: url(svg_face01.svg);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <img src="svg_face01.svg" alt="" class="svg1">
+    </div>
+
+    <!-- <div class="box2">
+
+    </div> -->
+
+    <style>
+        #svg_face{
+            width: 500px;height: 500px;
+            background: #ccc;
+        }
+        .hair{
+            fill:red;
+            stroke:#000;
+            stroke-width:2.7462;
+            stroke-miterlimit:10;
+        }
+
+        .face{
+           transform: translateY(0px);
+           animation:faceAni 0.5s linear alternate infinite
+        }
+        @keyframes faceAni {
+            to{transform: translateY(-8px);}
+        }
+       
+    </style>
+
+    <svg version="1.1" id="svg_face" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 200 200" >
+        <style>
+          .st2,.st3{fill:none;stroke:#000;stroke-miterlimit:10}
+          .st2{stroke-width:2.7462;stroke-linecap:round}
+          .st3{stroke-width:2.5184}
+        </style>
+        <path class="hair" d="M179.8 101.1c0 47.3-35.7 69.7-79.8 69.7s-79.8-22.4-79.8-69.7S56 15.5 100 15.5s79.8 38.3 79.8 85.6z" style=""/>
+       
+        
+            <path d="M40 119.8c0-35.6 120-35.6 120 0s-26.9 64.4-60 64.4-60-28.8-60-64.4z" style="fill:#fff;stroke:#000;stroke-width:2.7462;stroke-miterlimit:10"/>
+            
+            <path class="st2" d="M100 93.1V52.4M65.7 97.4V62.9M134 97.4V62.9"/>
+            <g class="face">
+            <circle cx="86.4" cy="126.3" r="2.9"/>
+            <circle cx="115.9" cy="126.3" r="2.9"/>
+            <path class="st3" d="M101.7 170.6c11.4 0 20.6-11.6 20.6-25.8H81c0 14.2 9.3 25.8 20.7 25.8z"/>
+            <path class="st3" d="M88 165.4s3.1-12.2 14.5-12.2 12.2 10.2 12.2 10.2"/>
+        </g>
+      </svg>
+
+
+
+      
+
+
+</body>
+</html>

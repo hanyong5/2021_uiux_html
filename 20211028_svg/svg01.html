@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sv{
+            background: #ccc;
+            width: 100px;height: 100px;
+        }
+        .sv circle{
+            stroke: green;
+            stroke-width: 30;
+            fill:skyblue;
+            stroke-dasharray:189;
+            stroke-dashoffset:189;
+            animation: ani 1s forwards alternate
+        }
+        @keyframes ani {
+            100%{stroke-dashoffset:100;}
+        }
+    </style>
+</head>
+<body>
+    <svg class="sv">
+        <circle cx="50" cy="50" r="30" />
+    </svg>
+
+    <style>
+        #Layer_1{background: #ddd;width: 100px;height: 100px;}
+        .eye1st{
+            transform:scale(1);transform-origin: 45% 40%;
+            /* animation:eye1 0.5s linear alternate infinite */
+        }
+        .eye2st{
+            transform:scale(1);transform-origin: 55% 40%;
+            /* animation:eye2 0.5s linear alternate infinite */
+        }
+
+        @keyframes eye1 {
+            100%{transform:scale(1.5)}
+        }
+        @keyframes eye2 {
+            100%{transform:scale(1.5)}
+        }
+
+
+        #Layer_1:hover .eye1st{animation:eye1 0.5s linear alternate infinite}
+        #Layer_1:hover .eye2st{animation:eye2 0.5s linear alternate infinite}
+        
+
+
+    </style>
+    
+
+<svg id="Layer_1"  x="0" y="0" viewBox="0 0 500 500">
+  <style>
+    .st0{fill:#fff;stroke:#000;stroke-width:12.9677;}
+  </style>
+  <path class="st0" d="M409.2 204c-13.5 0-25.5 6-33.8 15.4-4.9-20.6-14.9-39.2-28.6-54.5H159.2c-13.7 15.3-23.7 33.9-28.6 54.5-8.2-9.4-20.3-15.4-33.8-15.4-24.7 0-44.8 20.1-44.8 44.9s20.1 44.8 44.8 44.8c13.5 0 25.5-6 33.8-15.4 13.3 55.3 63 96.4 122.4 96.4s109.1-41.1 122.4-96.4c8.2 9.4 20.3 15.4 33.8 15.4 24.8 0 44.8-20.1 44.8-44.8S433.9 204 409.2 204z"/>
+  <path d="M253 123c-37.3 0-70.7 16.2-93.8 41.9h187.6C323.7 139.2 290.3 123 253 123z" style="fill:#ef4136;stroke:#000;stroke-width:12.9677;stroke-miterlimit:10"/>
+  <path class="st0" d="M211.7 269.9c-3.3 6.4-5.2 13.6-5.2 21.3 0 25.7 20.8 46.5 46.5 46.5s46.5-20.8 46.5-46.5c0-7.7-1.9-14.9-5.2-21.3h-82.6z"/>
+  <path class="st0" d="M237.2 269.9h30.2v30.2h-30.2zm169.7 0c10.9 0 19.7-8.8 19.7-19.7 0-10.9-8.8-19.7-19.7-19.7m-311.8-.1c-10.9 0-19.7 8.8-19.7 19.7 0 10.9 8.8 19.7 19.7 19.7"/>
+  <circle cx="221.3" cy="208.8" r="11.8" class="eye1st"/>
+  <circle cx="282.2" cy="208.8" r="11.8" class="eye2st"/>
+</svg>
+
+
+
+<style>
+
+    path{
+        stroke:black;
+        stroke-width:20;
+        fill:red;
+        stroke-dasharray:6712;
+        stroke-dashoffset:3000;
+    }
+</style>
+<svg  viewBox="0 0 1867 1774" fill="#ff0" xmlns="http://www.w3.org/2000/svg">
+
+<path d="M933.5 56.6312L1136.99 682.917L1140.92 695.009H1153.64L1812.15 695.009L1279.4 1082.07L1269.11 1089.55L1273.04 1101.64L1476.54 1727.93L943.786 1340.86L933.5 1333.39L923.214 1340.86L390.464 1727.93L593.956 1101.64L597.885 1089.55L587.599 1082.07L54.8485 695.009L713.364 695.009H726.078L730.008 682.917L933.5 56.6312Z" fill="#C4C4C4"  stroke-width="35"/>
+</svg>
+</body>
+</html>

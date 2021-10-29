@@ -1,0 +1,12 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 200 200" >
+  <style>
+    .st2,.st3{fill:none;stroke:#000;stroke-miterlimit:10}.st2{stroke-width:2.7462;stroke-linecap:round}.st3{stroke-width:2.5184}
+  </style>
+  <path d="M179.8 101.1c0 47.3-35.7 69.7-79.8 69.7s-79.8-22.4-79.8-69.7S56 15.5 100 15.5s79.8 38.3 79.8 85.6z" style="fill:#27aae1;stroke:#000;stroke-width:2.7462;stroke-miterlimit:10"/>
+  <path d="M40 119.8c0-35.6 120-35.6 120 0s-26.9 64.4-60 64.4-60-28.8-60-64.4z" style="fill:#fff;stroke:#000;stroke-width:2.7462;stroke-miterlimit:10"/>
+  <path class="st2" d="M100 93.1V52.4M65.7 97.4V62.9M134 97.4V62.9"/>
+  <circle cx="86.4" cy="126.3" r="2.9"/>
+  <circle cx="115.9" cy="126.3" r="2.9"/>
+  <path class="st3" d="M101.7 170.6c11.4 0 20.6-11.6 20.6-25.8H81c0 14.2 9.3 25.8 20.7 25.8z"/>
+  <path class="st3" d="M88 165.4s3.1-12.2 14.5-12.2 12.2 10.2 12.2 10.2"/>
+</svg>
