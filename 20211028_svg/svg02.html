@@ -36,13 +36,18 @@
             stroke-miterlimit:10;
         }
 
-        .face{
+        #svg_face .face{
            transform: translateY(0px);
-           animation:faceAni 0.5s linear alternate infinite
+           
         }
         @keyframes faceAni {
             to{transform: translateY(-8px);}
         }
+
+        #svg_face.active .face{
+            animation:faceAni 0.5s linear alternate infinite
+        }
+
        
     </style>
 
@@ -65,6 +70,13 @@
             <path class="st3" d="M88 165.4s3.1-12.2 14.5-12.2 12.2 10.2 12.2 10.2"/>
         </g>
       </svg>
+
+
+      <script>
+          document.querySelector("#svg_face").addEventListener("click",function(){
+              this.classList.toggle("active");
+          })
+      </script>
 
 
 
