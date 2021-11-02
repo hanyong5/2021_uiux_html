@@ -29,6 +29,7 @@
              display: flex;justify-content: center;
              align-items: center;font-size: 3em;
          }
+         .wall.wall_0st{background: #000;}
          .wall.wall_0st.left{
              width: 1000vw;
              transform:rotateY(90deg) translate3d(0,0,-500vw)
@@ -38,27 +39,83 @@
              width: 1000vw;
              transform:rotateY(90deg) translate3d(0,0,-400vw)
             }
+
+        .bar{width: 100%;height: 10px;background: #000;position: fixed;}
+        .bar .stick{width:0;height: 100%;background: red;}
+
+        .wall.wall_1st{
+            transform:translate3d(0,0,300vw);
+            background-image: url(images/parallax7.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .wall.wall_2st{
+            transform:translate3d(0,0,200vw);
+            background-image: url(images/parallax8.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         
+        }
+        .wall.wall_3st{transform:translate3d(0,0,100vw)}
+        .wall.wall_4st{transform:translate3d(0,0,0)}
+        .wall.wall_5st{transform:translate3d(0,0,-200vw)}
+        .wall.wall_6st{transform:translate3d(0,0,-300vw)}
+        .wall.wall_7st{transform:translate3d(0,0,-400vw)}
+        .wall.wall_8st{transform:translate3d(0,0,-500vw)}
     </style>
 
 </head>
 <body>
+    <div class="bar">
+        <div class="stick"></div>
+    </div>
     <div class="wrap"> <!-- perspective value / position fixed-->
         <div class="stage"> <!-- mouse pointer rotate -->
             <div class="house"><!-- 3d wall / scroll house wall -->
                 <div class="wall wall_0st left">left</div>
                 <div class="wall wall_0st right">right</div>
-                <div class="wall wall_1st">view1</div>
-                <div class="wall wall_2st">view2</div>
-                <div class="wall wall_3st">view3</div>
-                <div class="wall wall_4st">view4</div>
-                <div class="wall wall_5st">view5</div>
-                <div class="wall wall_6st">view6</div>
-                <div class="wall wall_7st">view7</div>
-                <div class="wall wall_8st">view8</div>
+                <div class="wall wall_1st">view1</div> <!-- 300 -->
+                <div class="wall wall_2st">view2</div> <!-- 200 -->
+                <div class="wall wall_3st">view3</div> <!-- 100 -->
+                <div class="wall wall_4st">view4</div> <!-- 0 -->
+                <div class="wall wall_5st">view5</div> <!-- -100 -->
+                <div class="wall wall_6st">view6</div> <!-- -300 -->
+                <div class="wall wall_7st">view7</div> <!-- -400 -->
+                <div class="wall wall_8st">view8</div> <!-- -500 -->
             </div>  <!-- house -->
         </div><!-- stage -->
     </div><!-- wrap -->
+    <script>
+        // document height, browser height, scroll location
+        // document height = document.body.offsetHeight
+        // browser height = window.innerHeight
+        // scroll location = window.pageYOffset // scroll event
+
+        const stickBar = document.querySelector(".stick");
+        const house = document.querySelector(".house")
+        let maxScroll;
+
+        window.addEventListener("resize",function(){
+            view()
+        })
+
+        window.addEventListener("scroll",function(){
+            let scroll = window.pageYOffset / maxScroll;
+            let move = scroll * 980 - 500;
+            console.log(scroll)
+            //stickBar.style.width = scroll * 100 + "%";
+            stickBar.style.width = `${scroll*100}%`
+            house.style.transform = `translate3d(0,0,${move}vw)`
+
+        })
+
+        function view(){
+            maxScroll = document.body.offsetHeight - window.innerHeight;
+        }
+        view();
+    </script>
     
 </body>
 </html>
