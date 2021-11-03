@@ -21,7 +21,7 @@
             width: 100vw;height: 100vh;
             transform-style: preserve-3d;
             position: relative;
-            transform:translate3d(0,0,-500vw)
+            transform:translate3d(0,0,-490vw)
         }
         .wall{
             width: 100vw;height: 100vh;
@@ -44,8 +44,13 @@
              transform:rotateY(90deg) translate3d(0,0,-400vw)
         }
 
-        .wall.wall_sst{
+        .wall.wall_title{
             transform:translate3d(0,0,500vw);
+            
+        }
+
+        .wall.wall_sst{
+            transform:translate3d(0,0,490vw);
             background-image: url(images/firewatch.jpg)
         }
         .wall.wall_1st{
@@ -86,13 +91,14 @@
             background-image: url(images/parallax0.png);
         }
         .view{
-            position: fixed;
+            position: fixed;z-index: 10;
         }
        
     </style>
 </head>
 <body>
     <div class="view">
+        <!-- <button class="btn1">button</button> -->
         scrollratio <span class="scroll">0</span>
     </div>
     <div class="wrap">
@@ -101,7 +107,8 @@
                 <div class="wall wall_0st left">left</div>
                 <div class="wall wall_0st right">right</div>
                 
-                <div class="wall wall_sst">HANYONG5</div> 
+                <div class="wall wall_title">HANYONG5</div> 
+                <div class="wall wall_sst"></div> 
                 <div class="wall wall_1st">view1</div> 
                 <div class="wall wall_2st">view2</div>
                 <div class="wall wall_3st">view3</div>
@@ -117,14 +124,30 @@
     </div>
 
     <script>
+        
+        let menuPosX = 0;
+        let menuPosY = 0;
+
         window.addEventListener("scroll",function(){
             let scroll = window.pageYOffset  / ( document.body.offsetHeight - window.innerHeight )
             document.querySelector(".scroll").innerHTML = scroll * 1000;
 
-            let ratio = scroll * 980 - 500;
+            let ratio = scroll * 980 - 490;
             //document.querySelector(".house").style.transform = "translate3d(0,0,"+ ratio +"vw)"
             document.querySelector(".house").style.transform = `translate3d(0,0,${ratio}vw)`
         })
+
+        window.addEventListener("mousemove",function(e){
+            console.log(1 - e.clientY / window.innerHeight * 2);
+
+            menuPosX = -1 + e.clientX / window.innerWidth * 2;
+            menuPosY = 1 - e.clientY / window.innerHeight * 2;
+            document.querySelector(".stage").style.transform = `rotateY(${menuPosX*5}deg) rotateX(${menuPosY*5}deg)`
+
+        });
+
+        
+        
     </script>
 </body>
 </html>
