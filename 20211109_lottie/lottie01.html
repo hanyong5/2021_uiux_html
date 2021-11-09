@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.0/lottie.min.js" integrity="sha512-mdyZsdRAVdjUM6dKsRxu03wcxXMtt1UDkkQSDs+hZCtGoO0NsIgPHpYPoD7VzrlB/auvVFQlWP+w/6Co+SGi3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #lottie{width: 300px;}
+        #lottie1{width: 500px;}
+        #lottie2{width: 500px;}
+    </style>
+</head>
+<body>
+    
+
+    <div id="lottie"></div>
+    <div id="lottie1"></div>
+    <div id="lottie2"></div>
+
+    <script>
+        lottie.loadAnimation({
+            container: document.querySelector("#lottie"), // the dom element that will contain the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://assets6.lottiefiles.com/packages/lf20_g6ftnsny.json' // the path to the animation json
+        });
+        lottie.loadAnimation({
+            container: document.querySelector("#lottie1"), // the dom element that will contain the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://assets7.lottiefiles.com/packages/lf20_naa8hmmn.json' // the path to the animation json
+        });
+        lottie.loadAnimation({
+            container: document.querySelector("#lottie2"), // the dom element that will contain the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://assets6.lottiefiles.com/packages/lf20_joek1qte.json' // the path to the animation json
+        });
+
+    </script>
+
+    
+</body>
+</html>
