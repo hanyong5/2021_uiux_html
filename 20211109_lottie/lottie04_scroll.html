@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lottie</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body{
+            height: 400vh;
+        }
+        .box1{
+            width: 100%;height: 100%;background: skyblue;
+            position: fixed;left: 50%;top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box{position: fixed;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        scroll : <span class="scroll">0</span><br>
+        scroll max size : <span class="scrollMax">0</span><br>
+        scroll ratio : <span class="scrollRatio">0</span><br>
+    </div>
+    <div class="box1"></div>
+    <script>
+        const ani1 = lottie.loadAnimation({
+            container:document.querySelector(".box1"),
+            renderer:'svg',
+            loop:false,
+            autoplay:false,
+            path:'https://assets2.lottiefiles.com/packages/lf20_dhcju67u.json'
+        });
+
+
+        const scroll = document.querySelector(".scroll");
+        const scrollMax = document.querySelector(".scrollMax");
+        const scrollRatio= document.querySelector(".scrollRatio");
+
+
+
+        window.addEventListener("scroll",function(){
+            let scrollY = window.pageYOffset;
+            let scrollHeight = document.body.offsetHeight - window.innerHeight;
+            let ratio = scrollY / scrollHeight;
+
+            ani1.goToAndStop(ratio * 91,true)
+
+            
+
+
+
+
+            scroll.innerHTML = scrollY
+            scrollMax.innerHTML = scrollHeight
+            scrollRatio.innerHTML = ratio
+
+        })
+
+        
+
+    </script>
+</body>
+</html>
