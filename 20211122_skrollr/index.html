@@ -8,8 +8,16 @@
     <link rel="stylesheet" href="../css/reset.css">
     <script src="js/skrollr.min.js"></script>
     <style>
-        body{height:500vh}
-        .box{position: fixed;}
+        body{height:500vh;background: #000;}
+        .box{position: fixed;color:white}
+        #scene_1st{
+            background:url(img/bg/space_stars_static.svg);
+            height: 500vh;width: 100%;
+        }
+        .man{
+            position: absolute;left: 50%;top: 50%; 
+            /* transform: translate(-50%,-50%); */
+         }
     </style>
     
 </head>
@@ -18,6 +26,31 @@
         현재위치 : <span class="scroll">0</span><br>
         스크롤높이 : <span class="scrollHeight">0</span>
     </div>
+
+    <section id="scene_1st" class="view01">
+        <div class="man" 
+        data-0="transform: translate(-50%,-50%) scale(0);position:fixed"
+        data-200="transform: translate(-50%,-50%) scale(1)"
+        >
+            <img src="img/char/character_astronaut.svg" alt=""
+            data-0='display:block'
+            data-400='display:none'
+            >
+            <img src="img/char/character_astronaut_drift.svg" alt=""
+            data-0='display:none'
+            data-400='display:block'
+            data-800='display:none'
+            >
+            <img src="img/char/character_astronaut_excited.svg" alt=""
+            data-0='display:none'
+            data-800='display:block'
+            >
+        </div>
+        
+
+    </section>
+
+
     <script>
         skrollr.init();
 
@@ -38,6 +71,7 @@
             document.querySelector(".scrollHeight").innerHTML = wHeight;
             console.log(scrollY/wHeight*100)
         }
+
 
         viewer();
  
