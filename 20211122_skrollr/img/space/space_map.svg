@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<radialGradient id="SVGID_2_" cx="256" cy="235.6821" r="209.0366" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FCDB43"/>
+	<stop  offset="0.4678" style="stop-color:#F5B81C"/>
+	<stop  offset="0.9632" style="stop-color:#F5B81C;stop-opacity:0.0692"/>
+	<stop  offset="1" style="stop-color:#F5B81C;stop-opacity:0"/>
+</radialGradient>
+<circle opacity="0.6" fill="url(#SVGID_2_)" cx="256" cy="235.682" r="209.037"/>
+<circle opacity="0.3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="256" cy="235.682" r="181.008"/>
+<g opacity="0.3">
+	<defs>
+		<circle id="SVGID_4_" opacity="0.3" cx="256" cy="235.682" r="176.342"/>
+	</defs>
+	<clipPath id="SVGID_3_">
+		<use xlink:href="#SVGID_4_"  overflow="visible"/>
+	</clipPath>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="55.046" y1="38.009" x2="450.708" y2="433.671"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="25.046" y1="68.009" x2="420.708" y2="463.671"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="-4.954" y1="98.009" x2="390.708" y2="493.671"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="-34.954" y1="128.009" x2="360.708" y2="523.671"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="85.046" y1="0" x2="480.708" y2="395.662"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="116.338" y1="-30" x2="512" y2="365.662"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="146.338" y1="-60" x2="542" y2="335.662"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="447.35" y1="33.358" x2="51.688" y2="429.021"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="417.35" y1="3.358" x2="21.688" y2="399.021"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="387.35" y1="-26.642" x2="-8.312" y2="369.021"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="357.35" y1="-56.642" x2="-38.312" y2="339.021"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="485.358" y1="63.358" x2="89.696" y2="459.021"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="515.358" y1="94.65" x2="119.696" y2="490.312"/>
+	
+		<line opacity="0.3" clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="545.358" y1="124.65" x2="149.696" y2="520.312"/>
+	<use xlink:href="#SVGID_4_"  overflow="visible" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"/>
+</g>
+<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -91.6718 250.0474)" opacity="0.3" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="1,10" cx="256" cy="235.682" rx="73.098" ry="197.674"/>
+<ellipse opacity="0.3" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="1,10" cx="256" cy="235.683" rx="197.674" ry="26.985"/>
+<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 241.6328 -111.989)" opacity="0.3" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="1,10" cx="255.999" cy="235.682" rx="126.021" ry="197.673"/>
+<circle fill="#FFFFFF" cx="188.633" cy="171.991" r="7.575"/>
+<circle opacity="0.7" fill="#FFFFFF" cx="288.666" cy="177.875" r="4.438"/>
+<circle opacity="0.7" fill="#FFFFFF" cx="225" cy="268.961" r="4.438"/>
+<circle opacity="0.7" fill="#FFFFFF" cx="288.666" cy="240.417" r="9.884"/>
+<circle opacity="0.7" fill="#FFFFFF" cx="213.967" cy="208.698" r="2.607"/>
+<circle opacity="0.7" fill="#FFFFFF" cx="350.804" cy="232" r="2.476"/>
+<circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" stroke-dasharray="2,4" cx="188.633" cy="171.991" r="9.742"/>
+<g>
+	<circle fill="#FFFFFF" cx="306.41" cy="288.269" r="5.441"/>
+	
+		<circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" stroke-dasharray="2,4" cx="306.41" cy="288.269" r="6.997"/>
+	<circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="306.41" cy="288.269" r="10.164"/>
+	<circle fill="#FFFFFF" cx="321.776" cy="300.324" r="3.934"/>
+	
+		<circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" stroke-dasharray="2,4" cx="321.776" cy="300.324" r="5.452"/>
+	<circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="321.776" cy="300.324" r="8.369"/>
+</g>
+<circle opacity="0.7" fill="#FFFFFF" cx="170.357" cy="281.272" r="2.607"/>
+<circle opacity="0.7" fill="#FFFFFF" cx="266.226" cy="326.524" r="2.607"/>
+<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" stroke-dasharray="2,4" d="M285.166,288.031
+	c0,0-45.044,3.382-35.666-55.568c10.467-65.796-46.532-60.472-46.532-60.472"/>
+<polygon fill="#FFFFFF" points="287.166,285 287.166,291.649 293.134,288.325 "/>
+</svg>

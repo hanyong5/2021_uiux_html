@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skrollr</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="js/skrollr.min.js"></script>
+    <style>
+        body{height:500vh}
+        .box{position: fixed;}
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+        현재위치 : <span class="scroll">0</span><br>
+        스크롤높이 : <span class="scrollHeight">0</span>
+    </div>
+    <script>
+        skrollr.init();
+
+        let scrollY = 0;
+        let WHeight = 0;
+
+
+        window.addEventListener("scroll",function(){
+            viewer();
+        })
+
+
+        function viewer(){
+            scrollY = window.pageYOffset;
+            wHeight = document.body.offsetHeight - window.innerHeight;
+            
+            document.querySelector(".scroll").innerHTML = scrollY;
+            document.querySelector(".scrollHeight").innerHTML = wHeight;
+            console.log(scrollY/wHeight*100)
+        }
+
+        viewer();
+ 
+        
+    </script>
+</body>
+</html>
